@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: DIDOT;
+  src: url(./assets/fonts/didot/Didot_Regular.ttf);
+}
+
+@font-face {
+  font-family: Prodisplay;
+  src: url(./assets/fonts/SFPRODISPLAYREGULAR.OTF) format("otf");
+}
+
+body {
+  margin: 0;
+  font-family: Prodisplay;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', Prodisplay,
+    monospace;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 800ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+
