@@ -13,16 +13,16 @@ const FAQ = () => {
             </div>
         </div>
         <div className="mt-10">
-            <p className="text-black text-lg text-center font-bold">Can I make reservations for dine in?</p>
+            <p className="text-black text-2xl text-xl text-center font-bold">Can I make reservations for dine in?</p>
             <div className="mt-3 grid grid-cols-9">
                 <p className="relative text-black text-lg text-left flex justify-center col-start-4 col-span-3 font-semibold pb-12 border-b-2 border-[#ACABAB]">
                     Currently we are not taking reservations, we are serving on a first come first serve basis, and guests will be able to grab a seat when all members of the party arrive. 
-                    <br /><br />If you have a large group for an event or a special occasion, email us at <a className="absolute fixed underline bottom-6 left-0" href="/contact">Info@muramb.com</a>
+                    <br /><br />If you have a large group for an event or a special occasion, email us at <a className="absolute fixed underline bottom-6 left-0" href="/news">Info@muramb.com</a>
                 </p>
             </div>
         </div>
         <div className="mt-10">
-            <p className="text-black text-lg text-center font-bold">I have dietary restrictions. Can I find other options in Mura?</p>
+            <p className="text-black text-2xl text-xl text-center font-bold">I have dietary restrictions. Can I find other options in Mura?</p>
             <div className="mt-3 grid grid-cols-9">
                 <p className="relative text-black text-lg text-left flex justify-center col-start-4 col-span-3 font-semibold pb-12 border-b-2 border-[#ACABAB]">
                 If you have any allergies, please let us know in advance, in order for us to determine available alternatives. In addition, we are not a gluten-free kitchen at this time.
@@ -30,7 +30,7 @@ const FAQ = () => {
             </div>
         </div>
         <div className="mt-10">
-            <p className="text-black text-lg text-center font-bold">How does the conveyor belt system work?</p>
+            <p className="text-black text-2xl text-xl text-center font-bold">How does the conveyor belt system work?</p>
             <div className="mt-3 grid grid-cols-9">
                 <p className="relative text-black text-lg text-left flex justify-center col-start-4 col-span-3 font-semibold pb-12 border-b-2 border-[#ACABAB]">
                 Please feel free to choose a plate by pulling it from the belt. Once touched, plates cannot be put back on the belt.
@@ -38,7 +38,7 @@ const FAQ = () => {
             </div>
         </div>
         <div className="mt-10 mb-12">
-            <p className="text-black text-lg text-center font-bold">Can I lift the covers on the plates while it is on the belt?</p>
+            <p className="text-black lg:text-2xl text-xl text-center font-bold">Can I lift the covers on the plates while it is on the belt?</p>
             <div className="mt-3 grid grid-cols-9">
                 <p className="relative text-black text-lg text-left flex justify-center col-start-4 col-span-3 font-semibold pb-12 border-b-2 border-[#ACABAB]">
                 For sanitary purposes, please do not lift the covers. Once you are certain you would like a plate, then pull it from the belt.

@@ -5,6 +5,8 @@ const initialState = {
     resume_name: "",
     upload_button: false,
     upload_application: false,
+    file_content: null,
+    file_type: ","
 }
 
 const careerSlice = createSlice({
@@ -22,7 +24,9 @@ const careerSlice = createSlice({
             state.upload_application = true;
             state.resume_modal_open = !state.resume_modal_open;
         },
-        uploadButton: (state) => {
+        uploadButton: (state, action) => {
+            console.log(action.payload);
+            state.file_content = action.payload.content;
             state.upload_button = true;
         }
     }
