@@ -49,7 +49,7 @@ const Home = () => {
                     <img className="w-full" src="assets/Home/dinner.png" alt="cafe"/>
                 </div>
             </div>
-            <div className="lg:mt-40 mt-20 flex flex-row">
+            <div className="lg:mt-10 mt-5 flex flex-row">
                 <div className="w-1/2">
                     <img className="w-full" src="assets/Home/bar.png" alt="cafe"/>
                 </div>
@@ -58,6 +58,27 @@ const Home = () => {
                     <p className="font-semibold text-black text-xl text-center lg:mt-6 mt-3">INCLUDE WITH</p>
                     <img className="w-1/2 lg:mt-6 mt-3" src="assets/Home/bar_logo.png" alt="cafe_logo"/>
                     <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
+                </div>
+            </div>
+            <div className="lg:mt-40 mt-20">
+                <img className="w-full" src="assets/Home/map.png" alt="map" />
+            </div>
+            <div className="mt-10 grid lg:grid-cols-3 grid-cols-1">
+                <div className="lg:col-start-1 lg:col-span-1 w-full">
+                    <p className="font-bold text-black text-2xl text-center tracking-widest">CONTACT</p>
+                    <p className="font-bold text-black text-xl text-center tracking-widest">+1 813-123-5678</p>
+                    <p className="font-bold text-black text-xl text-center tracking-widest cursor-pointer">INFO@MURAMB.COM</p>
+                </div>
+                <div className="lg:col-start-2 lg:col-span-1 w-full lg:mt-0 mt-10">
+                    <p className="font-bold text-black text-2xl text-center tracking-widest">OPEN HOURS</p>
+                    <p className="font-bold text-black text-xl text-center tracking-widest">Sunday to Wednesday</p>
+                    <p className="font-bold text-black text-xl text-center tracking-widest">10 AM - 10 PM</p>
+                    <p className="font-bold text-black text-xl text-center tracking-widest">Thursday to Saturday</p>
+                    <p className="font-bold text-black text-xl text-center tracking-widest">10 AM - 11 PM</p>
+                </div>
+                <div className="lg:col-start-3 lg:col-span-1 w-full lg:mt-0 mt-10">
+                    <p className="font-bold text-black text-2xl text-center tracking-widest">SOCIAL NETWORK</p>
+                    <p className="font-bold text-black text-xl text-center tracking-widest">+1 813-123-5678</p>
                 </div>
             </div>
         </>
