@@ -12,6 +12,13 @@
   src: url(./assets/fonts/SFPRODISPLAYREGULAR.OTF) format("otf");
 }
 
+@layer utilities {
+  .square {
+    height: 0;
+    padding-bottom: 33.33%; /* Sets height relative to width */
+  }
+}
+
 body {
   margin: 0;
   font-family: Prodisplay;

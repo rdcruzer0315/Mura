@@ -12,10 +12,11 @@ import Home from './pages/Home/Home';
 import FAQ from './pages/FAQ/FAQ';
 import Careers from './pages/Careers/Careers';
 import News from './pages/News/News';
+import Admin from './pages/Admin/Admin';
 
 function App() {
   return (
-    <div>
+    <div className='bg-[#F5ECE6]'>
       <Router>
         <Header />
         <Routes>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/faq" element={ <FAQ /> } />
           <Route path="/careers" element={ <Careers /> } />
           <Route path="/news" element={ <News /> } />
+          <Route path="/admin" element={ <Admin /> } />
         </Routes>
       </Router>
     </div>

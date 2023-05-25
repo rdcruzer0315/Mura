@@ -32,7 +32,7 @@ const About = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative w-full">
                     <img className="w-full h-auto opacity-80" src="assets/main-1.png" alt="main-1" />
-                    <div class="absolute inset-0 bg-black opacity-30 mix-blend-multiply" />
+                    <div className="absolute inset-0 bg-black opacity-30 mix-blend-multiply" />
                 </div>
                 <div className="lg:p-36 p-12">
                     <p className=" text-black lg:text-5xl text-2xl">How it works</p>

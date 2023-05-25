@@ -2,13 +2,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { resumeModal, resumeUpload, uploadButton } from "../../../store/Upload";
 import ReactModal from "react-modal";
-import { modal_open, submit_appliction } from "../../../store/Career";
+import { modal_open, postData, submit_appliction } from "../../../store/Career";
 
 const Application = () => {
     const role = useSelector((state) => state.career.role);
     const resumeModalOpen = useSelector((state) => state.upload.resume_modal_open);
     const uploadbtn = useSelector((state) => state.upload.upload_button);
     const uploadApplication = useSelector((state) => state.upload.upload_application);
+    const resume_content = useSelector((state) => state.upload.file_content);
+    const resume_type = useSelector((state) => state.upload.file_type);
 
     const dispatch = useDispatch();
 
@@ -16,6 +18,8 @@ const Application = () => {
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
     const [resume, setResume] = useState();
+    const [authorize, setAuthorize] = useState("");
+    const [subdata, setSubdata] = useState(null);
 
     const onCoverletter = (e) => {
         let letter = e.target.value;
@@ -41,7 +45,13 @@ const Application = () => {
     const onFileUpload = (e) => {
         let files = e.target.files;
         setResume(files[0].name);
-        dispatch(uploadButton());
+        setSubdata(files[0]);   
+        dispatch(uploadButton(files[0]));
+    }
+
+    const onAuthrize = (e) => {
+        console.log(e.target.value);
+        setAuthorize(e.target.value);
     }
 
     const lastUpload = (e) => {
@@ -49,8 +59,18 @@ const Application = () => {
     }
 
     const onSubmitApplication = (e) => {
-        dispatch(submit_appliction());
-        dispatch(modal_open());
+        if ( coverletter === "" && phone === "" && authorize === "") {
+
+        } else {
+            const formData = new FormData();
+            formData.append("file", subdata);
+            formData.append("coverletter", coverletter);
+            formData.append("phone", phone);
+            formData.append("email", email);
+            formData.append("authorize", authorize);
+            dispatch(postData(formData));
+            dispatch(modal_open());
+        }
     }
 
     return (
@@ -130,11 +150,11 @@ const Application = () => {
                     </p>
                     <div className="col-start-4 col-span-1">
                             <div className="flex flex-row">
-                                <input type="radio" id="yes" name="authorization" value="Yes" />
+                                <input type="radio" id="yes" name="authorization" value="Yes" onClick={onAuthrize}/>
                                 <label className="pl-3 text-base font-bold">Yes</label>
                             </div>
                             <div className="flex flex-row">
-                                <input type="radio" id="no" name="authorization" value="No" />
+                                <input type="radio" id="no" name="authorization" value="No" onClick={onAuthrize} />
                                 <label className="pl-3 text-base font-bold">No</label>
                             </div>
                     </div>
@@ -202,7 +222,7 @@ const Application = () => {
                             <div className="grid lg:grid-cols-5 grid-cols-1 mt-1">
                                 <div className="col-start-1 col-span-2">
                                     <input 
-                                        accept="image/*" 
+                                        accept=".doc, .docx, .pdf" 
                                         id="icon-button-file" 
                                         type="file"
                                         className="hidden"
