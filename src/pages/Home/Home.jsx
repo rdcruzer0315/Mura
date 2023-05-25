@@ -78,7 +78,10 @@ const Home = () => {
                 </div>
                 <div className="lg:col-start-3 lg:col-span-1 w-full lg:mt-0 mt-10">
                     <p className="font-bold text-black text-2xl text-center tracking-widest">SOCIAL NETWORK</p>
-                    <p className="font-bold text-black text-xl text-center tracking-widest">+1 813-123-5678</p>
+                    <div className="flex flex-row justify-center mt-8">
+                        <img className="cursor-pointer w-8 h-8" src="assets/Home/instagram.png" alt="instagram" />
+                        <img className="cursor-pointer w-8 h-8 ml-5" src="assets/Home/social.png" alt="instagram" />
+                    </div>
                 </div>
             </div>
         </>
