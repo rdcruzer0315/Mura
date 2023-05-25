@@ -63,7 +63,7 @@ const Home = () => {
             <div className="lg:mt-40 mt-20">
                 <img className="w-full" src="assets/Home/map.png" alt="map" />
             </div>
-            <div className="mt-10 grid lg:grid-cols-3 grid-cols-1">
+            <div className="mt-10 pb-20 grid lg:grid-cols-3 grid-cols-1">
                 <div className="lg:col-start-1 lg:col-span-1 w-full">
                     <p className="font-bold text-black text-2xl text-center tracking-widest">CONTACT</p>
                     <p className="font-bold text-black text-xl text-center tracking-widest">+1 813-123-5678</p>
