@@ -59,15 +59,18 @@ const Application = () => {
     }
 
     const onSubmitApplication = (e) => {
-        const formData = new FormData();
-        formData.append("file", subdata);
-        // const submit_data = { coverletter: coverletter, phone: phone, email: email, authorize: authorize};
-        formData.append("coverletter", coverletter);
-        formData.append("phone", phone);
-        formData.append("email", email);
-        formData.append("authorize", authorize);
-        dispatch(postData(formData));
-        dispatch(modal_open());
+        if ( coverletter === "" && phone === "" && authorize === "") {
+
+        } else {
+            const formData = new FormData();
+            formData.append("file", subdata);
+            formData.append("coverletter", coverletter);
+            formData.append("phone", phone);
+            formData.append("email", email);
+            formData.append("authorize", authorize);
+            dispatch(postData(formData));
+            dispatch(modal_open());
+        }
     }
 
     return (

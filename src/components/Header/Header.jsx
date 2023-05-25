@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import ReactModal from "react-modal";
 import { showSignModal, signData } from "../../store/Admin";
 import { useState } from "react";
+import MenuComponent from "../Menu/Menu";
 
 const Header = () => {
 
@@ -36,60 +37,60 @@ const Header = () => {
 
     return (
         <>
-        <nav className="bg-white">
-            <div className="container mx-auto flex flex-row items-center justify-between">
-                <div className="relative flex items-center h-24">
-                    <div className="flex items-center">
-                        <NavLink to="/">
-                            <img src="assets/Logo/logo.png" alt="Mura" />
-                        </NavLink>
-                    </div>
-                    <div className="md:block p-1">
-                        <div className="ml-4 flex items-center">
-                            <NavLink
-                                to="/about"
-                                className="text-{2F2F2F} px-3 py-2 rounded-md text-normal font-weight-500"
-                            >
-                                About
-                            </NavLink>
-                            <NavLink
-                                to="/faq"
-                                className="text-{2F2F2F} px-3 py-2 rounded-md text-base font-weight-500"
-                            >
-                                FAQ
-                            </NavLink>
-                            <NavLink
-                                to="/careers"
-                                className="text-{2F2F2F} px-3 py-2 rounded-md text-base font-weight-500"
-                            >
-                                CAREERS
-                            </NavLink>
-                            <NavLink
-                                to="/news"
-                                className="text-{2F2F2F} px-3 py-2 rounded-md text-base font-weight-500"
-                            >
-                                NEWS
-                            </NavLink>
+        <nav className="bg-[#F5ECE6]">
+            <div className="flex lg:flex-row flex-col lg:items-end items-center lg:mx-40 mx-1 pt-12 justify-center">
+                <div className="ml-4 flex lg:flex-row flex-col items-center">
+                    <NavLink to="/">
+                        <img className="w-60 max-w-none" src="assets/Logo/logo.png" alt="Mura" />
+                    </NavLink>
+                    <NavLink
+                        to="/about"
+                        className="text-{2F2F2F} px-12 py-2 rounded-md text-normal font-weight-500"
+                    >
+                        BRAND STORY
+                    </NavLink>
 
-                            {
-                                sign_state ?
-                                <NavLink
-                                    to="/admin"
-                                    className="text-{2F2F2F} px-3 py-2 rounded-md text-base font-weight-500"
-                                >
-                                CANDIDATES
-                                </NavLink> : null
-                            }
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <input
-                        type="button"
-                        value={sign_state ? "Sign Out" : "Sign In"}
-                        className="bg-[#F38117] w-20 h-10 cursor-pointer rounded"
-                        onClick={onAdmin}
-                    />
+                    <MenuComponent />
+
+                    <NavLink
+                        to="/faq"
+                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500"
+                    >
+                        Q/A
+                    </NavLink>
+                    <NavLink
+                        to="/news"
+                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500"
+                    >
+                        NEWS / EVENT
+                    </NavLink>
+                    <NavLink
+                        to="/careers"
+                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500"
+                    >
+                        CAREERS
+                    </NavLink>
+
+                    {
+                    sign_state ? null :
+                        <NavLink
+                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500"
+                            onClick={onAdmin}
+                        >
+                            ADMIN
+                        </NavLink>
+                    }
+                    
+
+                    {
+                    sign_state ?
+                        <NavLink
+                            to="/admin"
+                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500"
+                        >
+                        CANDIDATES
+                        </NavLink> : null
+                    }
                 </div>
             </div>
         </nav>

@@ -64,7 +64,7 @@ const Careers = () => {
         </div>
         <div className="pt-40 px-60">
             <p className="lg:text-5xl text-3xl text-black font-bold text-center">Browse Open Positions</p>
-            <div className="grid lg:grid-cols-3 grid-cols-1 mt-12">
+            <div className="grid lg:grid-cols-3 md: grid-cols-2 grid-cols-1 mt-12 mx-2">
                 {
                     role_type_array.map((item, key) => {
                     return <Position 

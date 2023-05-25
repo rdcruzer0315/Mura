@@ -16,7 +16,7 @@ import Admin from './pages/Admin/Admin';
 
 function App() {
   return (
-    <div>
+    <div className='bg-[#F5ECE6]'>
       <Router>
         <Header />
         <Routes>

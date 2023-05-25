@@ -161,7 +161,7 @@ const Job_Description = () => {
                 <p className="text-black text-lg font-semibold pt-4">Requirements:</p>
                 <div>
                     {
-                        job_description[idx - 1].requirement.map((item) => {
+                        job_description[idx - 1].requirement.map((item, key) => {
                             return <p className="text-black text-base">{"-" + item}</p>
                         })
                     }
@@ -169,7 +169,7 @@ const Job_Description = () => {
                 <p className="text-black text-lg font-semibold pt-4">Responsibilities:</p>
                 <div>
                     {
-                        job_description[idx - 1].responsibility.map((item) => {
+                        job_description[idx - 1].responsibility.map((item, key) => {
                             return <p className="text-black text-base">{"-" + item}</p>
                         })
                     }
