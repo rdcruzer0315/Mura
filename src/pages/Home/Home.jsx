@@ -1,11 +1,12 @@
+import MapView from "../../components/MapView/MapView";
 
 const Home = () => {
     return (
         <>
             <div className="flex flex-col items-center justify-center mt-40">
-                <p className="text-5xl font-extrabold text-center mx-auto">EAT FUN. DRINK BETTER.</p>
-                <div className="grid grid-cols-9">
-                    <p className="col-start-3 col-span-5 text-2xl font-semibold text-center mt-12">
+                <p className="lg:text-5xl text-2xl font-extrabold text-center mx-auto">EAT UP AND ENJOY</p>
+                <div className="grid lg:grid-cols-9 grid-cols-1">
+                    <p className="lg:col-start-3 lg:col-span-5 lg:text-2xl lg:px-0 col-start-1 col-span-1 text-base px-10 font-semibold text-center mt-12">
                         Welcome to Myrtle Beach's first conveyor belt restaurant. We are excited to open our doors and offer
                         a unique and fun dining experience. Mura is not the traditional conveyor belt restaurant you may have
                         seen used for sushi. Our menu includes small bites ranging from our signature milk bread with seasonal
@@ -32,16 +33,16 @@ const Home = () => {
                     <img className="w-full" src="assets/Home/cafe.png" alt="cafe"/>
                 </div>
                 <div className="w-1/2 flex flex-col justify-center items-center">
-                    <p className="font-bold text-black text-5xl text-center">CAFE MENU</p>
-                    <p className="font-semibold text-black text-xl text-center lg:mt-6 mt-3">INCLUDE WITH</p>
+                    <p className="font-bold text-black lg:text-5xl text-lg text-center">CAFE MENU</p>
+                    <p className="font-semibold text-black lg:text-xl text-xs text-center lg:mt-6 mt-3">INCLUDE WITH</p>
                     <img className="w-1/2 lg:mt-6 mt-3" src="assets/Home/cafe_logo.png" alt="cafe_logo"/>
                     <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
                 </div>
             </div>
             <div className="lg:mt-10 mt-5 flex flex-row">
                 <div className="w-1/2 flex flex-col justify-center items-center">
-                    <p className="font-bold text-black text-5xl text-center">DINNER MENU</p>
-                    <p className="font-semibold text-black text-xl text-center lg:mt-6 mt-3">INCLUDE WITH</p>
+                    <p className="font-bold text-black lg:text-5xl text-lg text-center">DINNER MENU</p>
+                    <p className="font-semibold text-black lg:text-xl text-xs text-center lg:mt-6 mt-3">INCLUDE WITH</p>
                     <img className="w-1/2 lg:mt-6 mt-3" src="assets/Home/dinner_logo.png" alt="cafe_logo"/>
                     <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
                 </div>
@@ -54,14 +55,14 @@ const Home = () => {
                     <img className="w-full" src="assets/Home/bar.png" alt="cafe"/>
                 </div>
                 <div className="w-1/2 flex flex-col justify-center items-center">
-                    <p className="font-bold text-black text-5xl text-center">BAR MENU</p>
-                    <p className="font-semibold text-black text-xl text-center lg:mt-6 mt-3">INCLUDE WITH</p>
+                    <p className="font-bold text-black lg:text-5xl text-lg text-center">BAR MENU</p>
+                    <p className="font-semibold text-black lg:text-xl text-xs text-center lg:mt-6 mt-3">INCLUDE WITH</p>
                     <img className="w-1/2 lg:mt-6 mt-3" src="assets/Home/bar_logo.png" alt="cafe_logo"/>
                     <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
                 </div>
             </div>
-            <div className="lg:mt-40 mt-20">
-                <img className="w-full" src="assets/Home/map.png" alt="map" />
+            <div className="lg:my-40 my-20 flex">
+                <MapView />
             </div>
             <div className="mt-10 pb-20 grid lg:grid-cols-3 grid-cols-1">
                 <div className="lg:col-start-1 lg:col-span-1 w-full">
@@ -70,14 +71,14 @@ const Home = () => {
                     <p className="font-bold text-black text-xl text-center tracking-widest cursor-pointer">INFO@MURAMB.COM</p>
                 </div>
                 <div className="lg:col-start-2 lg:col-span-1 w-full lg:mt-0 mt-10">
-                    <p className="font-bold text-black text-2xl text-center tracking-widest">OPEN HOURS</p>
+                    <p className="font-bold text-black text-2xl text-center tracking-widest">HOURS OF OPERATION</p>
                     <p className="font-bold text-black text-xl text-center tracking-widest">Sunday to Wednesday</p>
                     <p className="font-bold text-black text-xl text-center tracking-widest">10 AM - 10 PM</p>
                     <p className="font-bold text-black text-xl text-center tracking-widest">Thursday to Saturday</p>
                     <p className="font-bold text-black text-xl text-center tracking-widest">10 AM - 11 PM</p>
                 </div>
                 <div className="lg:col-start-3 lg:col-span-1 w-full lg:mt-0 mt-10">
-                    <p className="font-bold text-black text-2xl text-center tracking-widest">SOCIAL NETWORK</p>
+                    <p className="font-bold text-black text-2xl text-center tracking-widest">CONNECT WITH US</p>
                     <div className="flex flex-row justify-center mt-8">
                         <img className="cursor-pointer w-8 h-8" src="assets/Home/instagram.png" alt="instagram" />
                         <img className="cursor-pointer w-8 h-8 ml-5" src="assets/Home/social.png" alt="instagram" />
