@@ -1,5 +1,9 @@
 import Map, { Marker } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
+import mapboxgl from "mapbox-gl"; // This is a dependency of react-map-gl even if you didn't explicitly install it
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const MapView = () => {
 
@@ -8,11 +12,11 @@ const MapView = () => {
             initialViewState={{
                 longitude: -78.945063,
                 latitude: 33.670658,
-                zoom: 15,
+                zoom: 12,
             }}
-            style={{ width:"100%", height:"500px" }}
+            style={{ width:"100%", height:"400px" }}
             mapStyle="mapbox://styles/arkiv119/cli3nchst00xb01pohfi1gllc"
-            mapboxAccessToken='pk.eyJ1IjoiYXJraXYxMTkiLCJhIjoiY2xpM21qNTZ2MTB1cTNlbzBmdmVnZHFveSJ9.LE4rmwB4XkbHxTqXNiZ5Gg'
+            mapboxAccessToken='pk.eyJ1IjoiYXJraXYxMTkiLCJhIjoiY2xpNGl4ZnQzMG9obTNnbndwc2RzcnN5aiJ9.Bh4U17FH5OYm12NHSGlSNw'
             doubleClickZoom={false}
         >
             <Marker
