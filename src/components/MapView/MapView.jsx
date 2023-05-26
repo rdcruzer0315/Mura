@@ -10,8 +10,8 @@ const MapView = () => {
     return (
         <Map
             initialViewState={{
-                longitude: -78.945063,
-                latitude: 33.670658,
+                longitude: -78.947204,
+                latitude: 33.670204,
                 zoom: 12,
             }}
             style={{ width:"100%", height:"400px" }}
@@ -20,8 +20,8 @@ const MapView = () => {
             doubleClickZoom={false}
         >
             <Marker
-                longitude={-78.945063}
-                latitude={33.670658}
+                longitude={-78.947204}
+                latitude={33.670204}
                 anchor='bottom'
             >
                 <div className='flex flex-col items-center'>
