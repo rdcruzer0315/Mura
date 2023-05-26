@@ -48,26 +48,26 @@ const Header = () => {
 
                     <NavLink
                         to="/about"
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-normal font-weight-500"
+                        className="text-{2F2F2F} px-12 py-2 rounded-md text-normal font-weight-500 text-center"
                     >
                         BRAND STORY
                     </NavLink>
 
                     <NavLink
                         to="/faq"
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500"
+                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
                     >
                         Q/A
                     </NavLink>
                     <NavLink
                         to="/news"
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500"
+                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
                     >
-                        NEWS / EVENT
+                        NEWS/EVENT
                     </NavLink>
                     <NavLink
                         to="/careers"
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500"
+                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
                     >
                         CAREERS
                     </NavLink>
@@ -75,7 +75,7 @@ const Header = () => {
                     {
                     sign_state ? null :
                         <NavLink
-                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500"
+                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
                             onClick={onAdmin}
                         >
                             ADMIN
@@ -87,7 +87,7 @@ const Header = () => {
                     sign_state ?
                         <NavLink
                             to="/admin"
-                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500"
+                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
                         >
                         CANDIDATES
                         </NavLink> : null
