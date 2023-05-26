@@ -41,16 +41,17 @@ const Header = () => {
             <div className="flex lg:flex-row flex-col lg:items-end items-center lg:mx-40 mx-1 pt-12 justify-center">
                 <div className="ml-4 flex lg:flex-row flex-col items-center">
                     <NavLink to="/">
-                        <img className="w-60 max-w-none" src="assets/Logo/logo.png" alt="Mura" />
+                        <img className="w-60 max-w-none lg:mr-20 mr-0" src="assets/Logo/logo.png" alt="Mura" />
                     </NavLink>
+
+                    <MenuComponent />
+
                     <NavLink
                         to="/about"
                         className="text-{2F2F2F} px-12 py-2 rounded-md text-normal font-weight-500"
                     >
                         BRAND STORY
                     </NavLink>
-
-                    <MenuComponent />
 
                     <NavLink
                         to="/faq"
