@@ -1,6 +1,6 @@
 import Map, { Marker } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
-import mapboxgl from "mapbox-gl"; // This is a dependency of react-map-gl even if you didn't explicitly install it
+import mapboxgl from "mapbox-gl";
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
@@ -25,10 +25,11 @@ const MapView = () => {
                 anchor='bottom'
             >
                 <div className='flex flex-col items-center'>
-                    <div className="bg-white shadow shadow-gray-500 flex flex-col items-center justify-center rounded-lg px-5 py-3">
-                        <p className="px-1 text-black">MYRTLE BEACH, SC</p>
-                        <p className="px-1 text-black">1390 FARROW PARKWAY 3A&B</p>
-                        <p className="px-1 text-black">MYRTLE BEACH, SC 29577</p>
+                    <div className="bg-white shadow shadow-gray-500 flex flex-col justify-center rounded-lg px-5 py-3">
+                        <p className="cursor-pointer text-gray-500 text-xs text-right">X</p>
+                        <p className="px-1 text-black text-center">MYRTLE BEACH, SC</p>
+                        <p className="px-1 text-black text-center">1390 FARROW PARKWAY 3A&B</p>
+                        <p className="px-1 text-black text-center">MYRTLE BEACH, SC 29577</p>
                     </div>
                     <img className="z-10 w-12" src="assets/Home/marker.png" alt='marker' />
                 </div>
