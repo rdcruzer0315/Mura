@@ -21,7 +21,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={ <Home /> } />
-          <Route path="/about" element={ <Home /> } />
+          <Route path="/brand" element={ <Home /> } />
           <Route path="/faq" element={ <FAQ /> } />
           <Route path="/careers" element={ <Careers /> } />
           <Route path="/news" element={ <News /> } />

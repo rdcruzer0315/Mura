@@ -45,14 +45,12 @@ const Careers = () => {
 
     return (
         <>
-        <div className="bg-[#F5F5F5] flex lg:flex-row flex-col">
-            <img className="lg:w-1/3 w-full" src="assets/careers.png" alt="careers" />
-            <div className="lg:w-2/3 w-full flex flex-col justify-center lg:mt-0 lg:mb-0 mt-20 mb-20">
-                <div className="grid lg:grid-cols-8 grid-cols-5">
-                    <p className="lg:col-start-4 lg:col-span-2 col-start-2 col-span-3 lg:text-5xl text-2xl mt-5 font-semibold lg:leading-12 leading-5 text-center">COME JOIN OUR TEAM</p>
-                </div>
-                <div className="lg:mt-12 mt-3 grid lg:grid-cols-8 grid-cols-5">
-                    <p className="lg:col-start-3 lg:col-span-4 col-start-2 col-span-3 text-xl text-left font-normal mt-2">
+        <div className="bg-[#F5ECE6] lg:pt-40 pt-20 flex lg:flex-row flex-col">
+            <img className="lg:w-1/2 lg:mx-32 w-full" src="assets/careers.png" alt="careers" />
+            <div className="lg:w-1/2 w-full flex flex-col justify-center lg:mt-0 mt-20">
+                <p className="lg:text-4xl text-2xl mt-5 font-semibold lg:leading-12 leading-5 text-center">COME JOIN OUR TEAM</p>
+                <div className="lg:mt-12 mt-3">
+                    <p className="lg:text-xl text-lg text-left lg:px-8 px-6 font-normal mt-2">
                         We are a passionate collective, from various backgrounds. 
                         We bring creativity, fun, hard work, and a zeal to make others happy with the joy of making delicious food. 
                         We take our culture seriously and hope you do, too! 
@@ -62,7 +60,7 @@ const Careers = () => {
                 </div>
             </div>
         </div>
-        <div className="pt-40 px-60">
+        {/* <div className="pt-40 px-60">
             <p className="lg:text-5xl text-3xl text-black font-bold text-center">Browse Open Positions</p>
             <div className="grid lg:grid-cols-3 md: grid-cols-2 grid-cols-1 mt-12 mx-2">
                 {
@@ -77,11 +75,7 @@ const Careers = () => {
                     })
                 }
             </div>
-        </div>
-        <div className="mt-40 flex flex-col justify-center items-center">
-            <p className="lg:text-3xl text-2xl text-black font-normal italic">Questions? Email us at:</p>
-            <p className="mt-5 mb-5 lg:text-2xl text-xl text-black font-normal italic">jobs@mura.com</p>
-        </div>
+        </div> */}
         {
         open_modal ? 
         <ReactModal
