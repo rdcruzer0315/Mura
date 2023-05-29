@@ -35,7 +35,7 @@ const FAQ = () => {
                 </p>
             </div>
             <div className="lg:w-1/3 w-full flex justify-center items-center">
-                <img src="assets/FAQ/frame.png" />
+                <img src="assets/Faq/Frame.png" />
             </div>
         </div>
         <div className="lg:mt-12 mt-8 lg:mx-56 mx-12">
