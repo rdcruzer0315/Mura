@@ -47,7 +47,7 @@ const Header = () => {
                     <MenuComponent />
 
                     <NavLink
-                        to="/about"
+                        to="/brand"
                         className="text-{2F2F2F} px-12 py-2 rounded-md text-normal font-weight-500 text-center"
                     >
                         BRAND STORY
