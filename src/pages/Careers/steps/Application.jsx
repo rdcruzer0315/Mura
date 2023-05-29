@@ -3,6 +3,7 @@ import { useState } from "react";
 import { resumeModal, resumeUpload, uploadButton } from "../../../store/Upload";
 import ReactModal from "react-modal";
 import { modal_open, postData, submit_appliction } from "../../../store/Career";
+import "./ResumeModal.css";
 
 const Application = () => {
     const role = useSelector((state) => state.career.role);
@@ -75,10 +76,10 @@ const Application = () => {
 
     return (
         <>
-        <div className="lg:px-12 lg:py-8 px-8 py-4">
+        <div className="lg:px-12 lg:py-8 px-2 lg:py-4 py-8">
             <div className="flex flex-col justify-start">
-                <p className="text-black text-3xl font-bold">Application</p>
-                <p className="text-black text-normal font-normal lg:pb-6 lg:mt-4 pb-2 mt-2 border-b-2 border-solid border-[#ACABAB]">{"General " + role + " Position"}</p>
+                <p className="text-black lg:text-3xl text-2xl font-bold">Application</p>
+                <p className="text-black text-normal font-semibold lg:pb-6 lg:mt-4 pb-2 mt-2 border-b-2 border-solid border-[#ACABAB]">{"General " + role + " Position"}</p>
             </div>
             <div className="lg:mt-8 mt-4 pb-4 border-b-2 border-solid border-[#ACABAB]">
                 <div className="grid lg:grid-cols-5 grid-cols-1 flex items-center">
@@ -86,14 +87,14 @@ const Application = () => {
                     <input
                         type="button"
                         value="Upload Resume"
-                        className="col-start-2 col-span-4 lg:w-80 lg:h-12 bg-[#F38117] cursor-pointer lg:text-xl text-base p-3 border-none text-center rounded-md"
+                        className="col-start-2 col-span-4 lg:w-80 lg:h-12 bg-[#F5ECE6] cursor-pointer lg:text-xl text-base p-3 border-none text-center rounded-2xl"
                         onClick={handleUpload}
                     />
                 </div>
                 {
                     uploadApplication ?
                     <div className="mt-3 grid lg:grid-cols-5 grid-cols-1 flex items-center">
-                        <div className="col-start-2 col-span-4 w-full h-12 px-5 flex flex-row justify-between items-center bg-[#DAD6D3] rounded">
+                        <div className="col-start-2 col-span-4 w-full h-12 px-5 flex flex-row justify-between items-center bg-[#DAD6D3] rounded-lg">
                             <p>{resume}</p>
                             <input
                                 type="button"
@@ -107,22 +108,22 @@ const Application = () => {
             </div>
             <div className="lg:mt-8 mt-4">
                 <div className="grid lg:grid-cols-5 grid-cols-1 flex pb-4 border-b-2 border-solid border-[#ACABAB]">
-                    <div>
-                        <p className="col-start-1 col-span-1 text-black text-xl font-bold">Cover Letter</p>
-                        <p className="text-left">(optional)</p>
+                    <div className="flex lg:flex-col flex-row">
+                        <p className="lg:col-start-1 lg:col-span-1 text-black text-xl font-bold">Cover Letter</p>
+                        <p className="text-left text-base flex justify-center items-center">(optional)</p>
                     </div>
                     <textarea
                         value={coverletter}
-                        className="col-start-2 col-span-4 w-full h-32 bg-[#D9D9D9] text-base p-2 border-none rounded-md resize-none"
+                        className="lg:col-start-2 lg:col-span-4 w-full h-32 bg-[#D9D9D9] text-base p-2 border-none rounded-md resize-none"
                         onChange={onCoverletter}
                     />
                 </div>
             </div>
             <div className="lg:mt-8 mt-4">
-                <div className="grid lg:grid-cols-5 grid-cols-2 flex pb-4 border-b-2 border-solid border-[#ACABAB]">
-                    <p className="col-start-1 col-span-1 text-black text-xl font-bold">Your Contact Information</p>
-                    <div className="col-start-2 col-span-4 grid lg:grid-cols-5 grid-col-2">
-                        <div className="col-start-1 col-span-2">
+                <div className="grid lg:grid-cols-5 grid-cols-1 flex pb-4 border-b-2 border-solid border-[#ACABAB]">
+                    <p className="lg:col-start-1 lg:col-span-1 w-full text-black text-xl font-bold">Your Contact Information</p>
+                    <div className="lg:col-start-2 lg:col-span-4 flex lg:flex-row flex-col lg:mt-0 mt-4">
+                        <div className="lg:w-1/2">
                             <p>Phone number<b className="pl-1 text-[#FF0000]">*</b></p>
                             <input
                                 type="text"
@@ -131,7 +132,7 @@ const Application = () => {
                                 onChange={onPhone}
                             />
                         </div>
-                        <div className="ml-3 col-start-3 col-span-3">
+                        <div className="lg:ml-3 ml-0 lg:mt-0 mt-3 lg:w-1/2">
                             <p>Email<b className="pl-1 text-[#FF0000]">*</b></p>
                             <input
                                 type="email"
@@ -164,7 +165,7 @@ const Application = () => {
                 <input
                     type="button"
                     value="Submit Application"
-                    className="lg:w-80 lg:h-12 bg-[#F38117] cursor-pointer lg:text-xl text-base p-3 border-none text-center rounded-md"
+                    className="lg:w-80 lg:h-12 bg-[#F38117] cursor-pointer lg:text-xl text-base p-3 border-none text-center rounded-2xl"
                     onClick={onSubmitApplication}
                 />
             </div>
@@ -183,30 +184,32 @@ const Application = () => {
             shouldReturnFocusAfterClose={true}
             ariaHideApp={false}
             parentSelector={() => document.body }
-            style={{
-                overlay: {
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    backgroundColor: 'rgb(0, 0, 0)',
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)'
-                },
-                content: {
-                    position: 'absolute',
-                    zIndex: 2,
-                    top: '20%',
-                    left: '25%',
-                    right: '25%',
-                    bottom: '40%',
-                    border: '1px solid black',
-                    background: '#fff',
-                    WebkitOverflowScrolling: 'touch',
-                    outline: 'none',
-                    padding: '20px'
-                }
-            }}
+            className="resumeModal"
+            overlayClassName="resumeOverlay"
+            // style={{
+            //     overlay: {
+            //         position: 'fixed',
+            //         top: 0,
+            //         left: 0,
+            //         right: 0,
+            //         bottom: 0,
+            //         backgroundColor: 'rgb(0, 0, 0)',
+            //         backgroundColor: 'rgba(0, 0, 0, 0.4)'
+            //     },
+            //     content: {
+            //         position: 'absolute',
+            //         zIndex: 2,
+            //         top: '20%',
+            //         left: '25%',
+            //         right: '25%',
+            //         bottom: '40%',
+            //         border: '1px solid black',
+            //         background: '#fff',
+            //         WebkitOverflowScrolling: 'touch',
+            //         outline: 'none',
+            //         padding: '20px'
+            //     }
+            // }}
             >
                 <div>
                     <div className="flex justify-end cursor-pointer" onClick={closeModal}>

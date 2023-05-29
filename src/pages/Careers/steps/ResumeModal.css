@@ -1,0 +1,42 @@
+.resumeModal {
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    left: 5%;
+    right: 5%;
+    bottom: 20%;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 2%;
+    background: #fff;
+    max-width: 600px;
+    margin: auto;
+    outline: none;
+}
+
+.resumeOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 600px) {
+    .resumeModal {
+        top: 30%;
+        left: 20%;
+        right: 20%;
+        bottom: 30%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .resumeModal {
+        top: 20%;
+        left: 30%;
+        right: 30%;
+        bottom: 20%;
+    }
+}

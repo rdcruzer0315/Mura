@@ -4,19 +4,20 @@ import { useSelector, useDispatch } from "react-redux";
 import { modal_open, set_role_type, submit_appliction } from "../../store/Career";
 import Job_Description from "./steps/Job_Description";
 import Application from "./steps/Application";
+import "./Modal.css";
 
 const Careers = () => {
 
     const role_type_array = new Array(
-        {role: "BAKER", type: "Full Time"},
-        {role: "BAKER", type: "Part-Time"},
-        {role: "CHEF", type: "Full Time"},
-        {role: "MANAGER", type: "Full Time"},
-        {role: "LINE COOK", type: "Full Time"},
-        {role: "LINE COOK", type: "Full Time"},
-        {role: "SERVER", type: "Full Time"},
-        {role: "SERVER", type: "Full Time"},
-        {role: "SERVER", type: "Full Time"},
+        {role: "BAKER", type: "Full Time", time: "Urgent"},
+        {role: "BAKER", type: "Part-Time", time: ""},
+        {role: "CHEF", type: "Full Time", time: ""},
+        {role: "MANAGER", type: "Full Time", time: "Urgent"},
+        {role: "LINE COOK", type: "Part-Time", time: ""},
+        {role: "LINE COOK", type: "Full Time", time: ""},
+        {role: "SERVER", type: "Full Time", time: "Urgent"},
+        {role: "SERVER", type: "Part-Time", time: ""},
+        {role: "SERVER", type: "Full Time", time: ""},
     );
     
     const open_modal = useSelector((state) => state.career.isOpen);
@@ -60,14 +61,15 @@ const Careers = () => {
                 </div>
             </div>
         </div>
-        {/* <div className="pt-40 px-60">
+        <div className="lg:mx-48 mx-6 lg:my-16 my-8">
             <p className="lg:text-5xl text-3xl text-black font-bold text-center">Browse Open Positions</p>
-            <div className="grid lg:grid-cols-3 md: grid-cols-2 grid-cols-1 mt-12 mx-2">
+            <div className="grid lg:grid-cols-3 grid-cols-1">
                 {
                     role_type_array.map((item, key) => {
                     return <Position 
                                 role = {item.role}
                                 type = {item.type}
+                                time = {item.time}
                                 idx = { key + 1 }
                                 uploadResume={uploadResume}
                                 saveRole={saveRole}
@@ -75,7 +77,7 @@ const Careers = () => {
                     })
                 }
             </div>
-        </div> */}
+        </div>
         {
         open_modal ? 
         <ReactModal
@@ -90,37 +92,15 @@ const Careers = () => {
             shouldReturnFocusAfterClose={true}
             ariaHideApp={false}
             parentSelector={() => document.body }
-            style={{
-                overlay: {
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    backgroundColor: 'rgb(0, 0, 0)',
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)'
-                },
-                content: {
-                    position: 'absolute',
-                    zIndex: 1,
-                    top: '5%',
-                    left: '25%',
-                    right: '25%',
-                    bottom: '5%',
-                    border: '1px solid black',
-                    background: '#fff',
-                    WebkitOverflowScrolling: 'touch',
-                    outline: 'none',
-                    padding: '20px'
-                }
-            }}
+            className="modal_style"
+            overlayClassName="MyOverlay"
         >
             <div className="bg-white">
                 <div className="flex justify-end cursor-pointer" onClick={closeModal}>
                     <img src="assets/close.svg" alt="close"/>
                 </div>
                 <div className="flex justify-center">
-                    <img src="assets/Logo/logo.png" alt="logo"/>
+                    <img className="lg:w-1/3 w-1/2 lg:mt-6" src="assets/Logo/logo.png" alt="logo"/>
                 </div>
                 {
                     step === 1 ? <Job_Description /> : <Application />
