@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
 } from "react-router-dom";
 
 import Header from "./components/Header";
@@ -13,6 +12,7 @@ import FAQ from './pages/FAQ/FAQ';
 import Careers from './pages/Careers/Careers';
 import News from './pages/News/News';
 import Admin from './pages/Admin/Admin';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
           <Route path="/news" element={ <News /> } />
           <Route path="/admin" element={ <Admin /> } />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
