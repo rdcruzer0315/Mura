@@ -11,11 +11,11 @@ import Home from './pages/Home/Home';
 import FAQ from './pages/FAQ/FAQ';
 import Careers from './pages/Careers/Careers';
 import News from './pages/News/News';
-import Admin from './pages/Admin/Admin';
 import Footer from './components/Footer/Footer';
 import Cafe from './pages/Menus/Cafe/Cafe';
 import Dinner from './pages/Menus/Dinner/Dinner';
 import Bar from './pages/Menus/Bar/Bar';
+import Candidate from './pages/Candidate/Candidate';
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
           <Route path="/faq" element={ <FAQ /> } />
           <Route path="/careers" element={ <Careers /> } />
           <Route path="/news" element={ <News /> } />
-          <Route path="/admin" element={ <Admin /> } />
+          <Route path="/candidate" element={ <Candidate /> } />
         </Routes>
         <Footer />
       </Router>
