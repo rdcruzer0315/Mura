@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -16,26 +17,15 @@ const Home = () => {
         </div>
         <div className="lg:mt-40 mt-20 flex flex-row">
             <div className="w-1/2">
-                {/* <svg viewBox="0 0 100 86" xmlns="http://www.w3.org/2000/svg">
-                    <path id="circle"
-                        d="M 0,10 L 46,10 C 66,10 100,33 66,58 C 66,58 56,66 46,66 L 0,66" 
-                        fill="black" 
-                        stroke="transparent"
-                        strokeWidth={10}
-                    />
-                    <text style={{ fontSize: "3px"}}>
-                        <textPath xlinkHref="#circle">
-                            CON PANCAKES SAUSAGE FRENCH TOAST SOUFLE PANCAKE EGG FRITTATA MILK BREAD FRUIT CORN DOG S WEDGE SALAD KOREA STREET T
-                        </textPath>
-                    </text>
-                </svg> */}
                 <img className="w-full" src="assets/Home/cafe.png" alt="cafe"/>
             </div>
             <div className="w-1/2 flex flex-col justify-center items-center">
                 <p className="font-bold text-black lg:text-5xl text-lg text-center">CAFE MENU</p>
                 <p className="font-semibold text-black lg:text-xl text-xs text-center lg:mt-6 mt-3">INCLUDE WITH</p>
                 <img className="w-1/2 lg:mt-6 mt-3" src="assets/Home/cafe_logo.png" alt="cafe_logo"/>
-                <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
+                <NavLink to="/cafe" className="flex justify-center">
+                    <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
+                </NavLink>
             </div>
         </div>
         <div className="lg:mt-10 mt-5 flex flex-row">
@@ -43,7 +33,9 @@ const Home = () => {
                 <p className="font-bold text-black lg:text-5xl text-lg text-center">DINNER MENU</p>
                 <p className="font-semibold text-black lg:text-xl text-xs text-center lg:mt-6 mt-3">INCLUDE WITH</p>
                 <img className="w-1/2 lg:mt-6 mt-3" src="assets/Home/dinner_logo.png" alt="cafe_logo"/>
-                <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
+                <NavLink to="/dinner" className="flex justify-center">
+                    <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
+                </NavLink>
             </div>
             <div className="w-1/2">
                 <img className="w-full" src="assets/Home/dinner.png" alt="cafe"/>
@@ -57,7 +49,9 @@ const Home = () => {
                 <p className="font-bold text-black lg:text-5xl text-lg text-center">BAR MENU</p>
                 <p className="font-semibold text-black lg:text-xl text-xs text-center lg:mt-6 mt-3">INCLUDE WITH</p>
                 <img className="w-1/2 lg:mt-6 mt-3" src="assets/Home/bar_logo.png" alt="cafe_logo"/>
-                <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
+                <NavLink to="/bar" className="flex justify-center">
+                    <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
+                </NavLink>
             </div>
         </div>
         </>

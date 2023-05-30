@@ -15,7 +15,7 @@ export const postData = createAsyncThunk(
     "career/postData",
     async (data, thunkAPI) => {
       try {
-        const response = await axios.post("http://localhost:8080/submit", data, {
+        const response = await axios.post("/api/submit", data, {
             headers: {
                 "Content-Type" : "multipart/form-data",
             },
