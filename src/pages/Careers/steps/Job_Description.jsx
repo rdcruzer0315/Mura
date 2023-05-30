@@ -172,7 +172,7 @@ const Job_Description = () => {
                 <div>
                     {
                         job_description[idx - 1].requirement.map((item, key) => {
-                            return <div className="flex flex-row justify-between font-medium"><p className="text-black text-base">-</p><p className="text-black text-base">{item}</p></div>
+                            return <div className="flex flex-row font-medium"><p className="text-black text-base">-</p><p className="text-black text-base">{item}</p></div>
                         })
                     }
                 </div>
@@ -180,7 +180,7 @@ const Job_Description = () => {
                 <div>
                     {
                         job_description[idx - 1].responsibility.map((item, key) => {
-                            return <div className="flex flex-row justify-between font-medium"><p className="text-black text-base">-</p><p className="text-black text-base">{item}</p></div>
+                            return <div className="flex flex-row font-medium"><p className="text-black text-base">-</p><p className="text-black text-base">{item}</p></div>
                         })
                     }
                 </div>
