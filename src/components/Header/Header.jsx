@@ -151,7 +151,7 @@ const Header = () => {
                         Enter Your Information
                     </p>
                     <div className="flex flex-col w-full items-center mt-6">
-                        <div className="lg:w-96 flex flex-col">
+                        <div className="lg:w-96 w-full flex flex-col">
                             <p>Your Email<b className="pl-1 text-[#FF0000]">*</b></p>
                             <input
                                 type="email"
@@ -161,7 +161,7 @@ const Header = () => {
                                 onChange={onEmail}
                             />
                         </div>
-                        <div className="lg:w-96 flex flex-col mt-2">
+                        <div className="lg:w-96 w-full flex flex-col mt-2">
                             <p>Password<b className="pl-1 text-[#FF0000]">*</b></p>
                             <input
                                 type="password"
@@ -174,7 +174,7 @@ const Header = () => {
                     <input
                         type="button"
                         value="Sign In"
-                        className="lg:mt-8 mt-2 lg:w-60 lg:h-12 bg-[#F38117] cursor-pointer lg:text-xl text-white text-base p-3 border-none text-center rounded-md"
+                        className="lg:mt-8 mt-8 lg:w-60 w-32 lg:h-12 bg-[#F38117] cursor-pointer lg:text-xl text-white text-base p-3 border-none text-center rounded-md"
                         onClick={onSignIn}
                     />
                 </div>
