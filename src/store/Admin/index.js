@@ -3,6 +3,7 @@ import axios from "axios";
 
 const initialState = {
     isOpenModal: false,
+    isOpenSignupModal: false,
     isSign: false,
     email: "",
     password: "",
@@ -24,11 +25,24 @@ export const signData = createAsyncThunk(
     }
 );
 
+export const signupData = createAsyncThunk(
+    "admin/signupData",
+    async (data, thunkAPI) => {
+      try {
+        const response = await axios.post("http://localhost:8080/signup", data);
+        console.log(response.data);
+        return response.data;
+      } catch (error) {
+        return thunkAPI.rejectWithValue(error.response.data);
+      }
+    }
+);
+
 export const getData = createAsyncThunk(
     "admin/getData",
     async (thunkAPI) => {
         try {
-            const response = await axios.get("/api/candidates");
+            const response = await axios.get("http://localhost:8080/candidates");
             return response.data;
         } catch (error) {
             return thunkAPI.rejectWithValue(error.response.data);
@@ -41,7 +55,7 @@ export const downloadResume = createAsyncThunk(
     async (path, thunkAPI) => {
         try {
             let name = path.path.slice(8, path.path.length);
-            const response = await axios.get(`/api/download/${name}`, { responseType: "blob" });
+            const response = await axios.get(`http://localhost:8080/download/${name}`, { responseType: "blob" });
 
             // Create a temporary download link
             const downloadUrl = window.URL.createObjectURL(new Blob([response.data]));
@@ -71,6 +85,9 @@ const adminSlice = createSlice({
                 state.isSign = false;
             }
         },
+        showSignUpModal: (state) => {
+            state.isOpenSignupModal = !state.isOpenSignupModal;
+        },
         showCoverletterModal: (state, action) => {
             state.coverletter_modal = true;
             state.coverletter = action.payload;
@@ -78,6 +95,9 @@ const adminSlice = createSlice({
         hideCoverletterModal: (state) => {
             state.coverletter_modal = false;
         },
+        signoutData: (state) => {
+            state.isSign = false;
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(signData.pending, (state, action) => {
@@ -87,6 +107,13 @@ const adminSlice = createSlice({
             if (action.payload === "Success!") {
                 state.isOpenModal = !state.isOpenModal;
                 state.isSign = true;
+            }
+        });
+        builder.addCase(signupData.pending, (state, action) => {
+        });
+        builder.addCase(signupData.fulfilled, (state, action) => {
+            if (action.payload === "Success!") {
+                state.isOpenSignupModal = !state.isOpenSignupModal;
             }
         });
         builder.addCase(getData.pending, (state, action) => {
@@ -102,5 +129,5 @@ const adminSlice = createSlice({
     }
 });
 
-export const { showSignModal, showCoverletterModal, hideCoverletterModal } = adminSlice.actions;
+export const { showSignModal, showSignUpModal, showCoverletterModal, hideCoverletterModal, signoutData } = adminSlice.actions;
 export default adminSlice.reducer;

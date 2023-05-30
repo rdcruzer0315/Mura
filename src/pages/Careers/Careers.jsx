@@ -46,8 +46,8 @@ const Careers = () => {
 
     return (
         <>
-        <div className="bg-[#F5ECE6] lg:pt-40 pt-20 flex lg:flex-row flex-col">
-            <img className="lg:w-1/2 lg:mx-32 w-full" src="assets/careers.png" alt="careers" />
+        <div className="bg-[#F5ECE6] lg:pt-40 pt-20 flex lg:flex-row flex-col lg:mx-48">
+            <img className="lg:w-1/2 lg:mr-32 w-full" src="assets/careers.png" alt="careers" />
             <div className="lg:w-1/2 w-full flex flex-col justify-center lg:mt-0 mt-20">
                 <p className="lg:text-4xl text-2xl mt-5 font-semibold lg:leading-12 leading-5 text-center">COME JOIN OUR TEAM</p>
                 <div className="lg:mt-12 mt-3">
