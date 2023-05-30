@@ -16,7 +16,7 @@ const MapView = () => {
             }}
             style={{ width:"100%", height:"400px" }}
             mapStyle="mapbox://styles/arkiv119/cli3nchst00xb01pohfi1gllc"
-            mapboxAccessToken='pk.eyJ1IjoiYXJraXYxMTkiLCJhIjoiY2xpNGl4ZnQzMG9obTNnbndwc2RzcnN5aiJ9.Bh4U17FH5OYm12NHSGlSNw'
+            mapboxAccessToken='pk.eyJ1IjoiYXJraXYxMTkiLCJhIjoiY2xpOW11eHoxMjRnNDNsbzlzY3B1cDd5aSJ9.-Jo1tK29eEYvoVAHiE9wlg'
             doubleClickZoom={false}
         >
             <Marker
