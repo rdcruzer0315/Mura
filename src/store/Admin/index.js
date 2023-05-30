@@ -28,7 +28,7 @@ export const getData = createAsyncThunk(
     "admin/getData",
     async (thunkAPI) => {
         try {
-            const response = await axios.get("http://localhost:8080/candidates");
+            const response = await axios.get("/api/candidates");
             return response.data;
         } catch (error) {
             return thunkAPI.rejectWithValue(error.response.data);
@@ -41,7 +41,7 @@ export const downloadResume = createAsyncThunk(
     async (path, thunkAPI) => {
         try {
             let name = path.path.slice(8, path.path.length);
-            const response = await axios.get(`http://localhost:8080/download/${name}`, { responseType: "blob" });
+            const response = await axios.get(`/api/download/${name}`, { responseType: "blob" });
 
             // Create a temporary download link
             const downloadUrl = window.URL.createObjectURL(new Blob([response.data]));
