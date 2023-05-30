@@ -1,0 +1,41 @@
+.CVModal {
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 5%;
+    right: 5%;
+    bottom: 25%;
+    padding: 10px;
+    border: 1px solid black;
+    background: #fff;
+    max-width: 600px;
+    margin: auto;
+    outline: none;
+}
+
+.overlayCVModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 600px) {
+    .CVModal {
+        top: 10%;
+        left: 20%;
+        right: 20%;
+        bottom: 10%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .CVModal {
+        top: 30%;
+        left: 30%;
+        right: 30%;
+        bottom: 30%;
+    }
+}

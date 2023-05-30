@@ -2,8 +2,9 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ReactModal from "react-modal";
 import { downloadResume, getData, hideCoverletterModal, showCoverletterModal } from "../../store/Admin";
+import "./Candidate.css";
 
-const Admin = () => {
+const Candidate = () => {
 
     const dispatch = useDispatch();
     const sign_state = useSelector((state) => state.admin.isSign);
@@ -37,24 +38,24 @@ const Admin = () => {
     return (
         <>
         <div className="flex items-center justify-center mt-8">
-            <table className="border-collapse border border-slate-400 w-5/6 text-center">
+            <table className="border-collapse border border-slate-400 lg:w-5/6 w-full text-center">
                 <caption className="caption-top text-2xl underline mb-3">
                     All Candidates
                 </caption>
                 <thead className="bg-[#797979]">
-                    <tr className="text-xl">
+                    <tr className="lg:text-xl text-base">
                         <th className="border border-slate-300">No</th>
                         <th className="border border-slate-300">Email</th>
                         <th className="border border-slate-300">Phone</th>
-                        <th className="border border-slate-300">Coverletter</th>
-                        <th className="border border-slate-300">Authrozation</th>
+                        <th className="border border-slate-300">CV</th>
+                        <th className="border border-slate-300">Auth</th>
                         <th className="border border-slate-300">Resume</th>
                     </tr>
                 </thead>
                 <tbody className="bg-[#F5F5F5]">
                 {
                     data.map((item, key) => {
-                    return <tr className="text-lg">
+                    return <tr className="lg:text-lg text-normal">
                         <td className="border border-slate-300">{key + 1}</td>
                         <td className="border border-slate-300 cursor-pointer">{item.email}</td>
                         <td className="border border-slate-300">{item.phone}</td>
@@ -81,33 +82,11 @@ const Admin = () => {
             shouldReturnFocusAfterClose={true}
             ariaHideApp={false}
             parentSelector={() => document.body }
-            style={{
-                overlay: {
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    backgroundColor: 'rgb(0, 0, 0)',
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)'
-                },
-                content: {
-                    position: 'absolute',
-                    zIndex: 1,
-                    top: '30%',
-                    left: '25%',
-                    right: '25%',
-                    bottom: '30%',
-                    border: '1px solid black',
-                    background: '#fff',
-                    WebkitOverflowScrolling: 'touch',
-                    outline: 'none',
-                    padding: '20px'
-                }
-            }}
+            className="CVModal"
+            overlayClassName="overlayCVModal"
         >
             <div className="bg-white">
-                <div className="px-10 py-6 flex flex-col items-center">
+                <div className="lg:px-10 px-0 py-6 flex flex-col items-center">
                     <p className="font-bold text-black lg:text-3xl text-xl text-center">
                         Coverletter
                     </p>
@@ -130,4 +109,4 @@ const Admin = () => {
     )
 }
 
-export default Admin;
+export default Candidate;
