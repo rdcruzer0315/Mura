@@ -13,7 +13,7 @@ const items = [
         title: "How does the conveyor belt system work?",
         content: "Please feel free to choose a plate by pulling it from the belt. Once touched, plates cannot be put back on the belt.",
     },
-    {
+    {  
         title: "Can I lift the covers on the plates while it is on the belt?",
         content: "For sanitary purposes, please do not lift the covers. Once you are certain you would like a plate, then pull it from the belt.",
     },
