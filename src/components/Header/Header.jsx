@@ -57,21 +57,29 @@ const Header = () => {
     return (
         <>
         <nav className="bg-[#F5ECE6]">
+            <div className="flex justify-end items-center">
+            {
+                sign_state ? null :
+                    <NavLink
+                        className="text-{2F2F2F} lg:mt-6 lg:mr-6 mt-2 mr-2 px-6 py-2 border border-1 border-black rounded-md text-base font-weight-500 text-center"
+                        onClick={onAdmin}
+                    >
+                    SIGN IN
+                    </NavLink>
+            }
+            </div>
             <div className="flex lg:flex-row flex-col lg:items-end items-center lg:mx-40 mx-1 pt-12 justify-center">
                 <div className="ml-4 flex lg:flex-row flex-col items-center">
                     <NavLink to="/">
                         <img className="w-60 max-w-none lg:mr-20 mr-0" src="assets/Logo/logo.png" alt="Mura" />
                     </NavLink>
-
                     <MenuComponent />
-
                     <NavLink
                         to="/brand"
                         className="text-{2F2F2F} px-12 py-2 rounded-md text-normal font-weight-500 text-center"
                     >
-                        BRAND STORY
+                    BRAND STORY
                     </NavLink>
-
                     <NavLink
                         to="/faq"
                         className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
@@ -88,23 +96,14 @@ const Header = () => {
                         to="/careers"
                         className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
                     >
-                        CAREERS
+                    CAREERS
                     </NavLink>
                     {/* <NavLink
                         onClick={onShowSignUpModal}
                         className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
                     >
-                        SignUp
+                    SignUp
                     </NavLink> */}
-                    {
-                    sign_state ? null :
-                        <NavLink
-                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
-                            onClick={onAdmin}
-                        >
-                            ADMIN
-                        </NavLink>
-                    }
                     {
                     sign_state ?
                         <>

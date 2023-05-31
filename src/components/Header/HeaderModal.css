@@ -1,6 +1,7 @@
 .MyModal {
     position: absolute;
     z-index: 1;
+    overflow: auto;
     top: 20%;
     left: 5%;
     right: 5%;
@@ -33,9 +34,9 @@
 
 @media screen and (min-width: 900px) {
     .MyModal {
-        top: 30%;
+        top: 28%;
         left: 25%;
         right: 25%;
-        bottom: 30%;
+        bottom: 28%;
     }
 }
