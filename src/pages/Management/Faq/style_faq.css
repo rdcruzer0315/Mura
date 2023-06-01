@@ -1,17 +1,18 @@
-.MyModal {
+.modal_style {
     position: absolute;
-    z-index: 1;
     overflow: auto;
-    top: 20%;
+    z-index: 10;
+    top: 5%;
     left: 5%;
     right: 5%;
-    bottom: 20%;
-    padding: 10px;
+    bottom: 5%;
     border: 1px solid black;
+    border-radius: 2%;
     background: #fff;
-    max-width: 600px;
+    -webkit-overflow-scrolling: "touch";
+    outline: 'none';
+    padding: 20px;
     margin: auto;
-    outline: none;
 }
 
 .MyOverlay {
@@ -24,19 +25,19 @@
 }
 
 @media screen and (min-width: 600px) {
-    .MyModal {
+    .modal_style {
         top: 10%;
-        left: 20%;
-        right: 20%;
+        left: 30%;
+        right: 30%;
         bottom: 10%;
     }
 }
 
 @media screen and (min-width: 900px) {
-    .MyModal {
-        top: 28%;
-        left: 25%;
-        right: 25%;
-        bottom: 28%;
+    .modal_style {
+        top: 30%;
+        left: 30%;
+        right: 30%;
+        bottom: 30%;
     }
 }

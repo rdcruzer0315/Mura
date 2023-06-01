@@ -9,13 +9,14 @@ const initialState = {
     idx: 0,
     submit: false,
     loading: false,
+    jobs: [],
 }
 
 export const postData = createAsyncThunk(
     "career/postData",
     async (data, thunkAPI) => {
       try {
-        const response = await axios.post("/api/submit", data, {
+        const response = await axios.post("http://localhost:8080/submit", data, {
             headers: {
                 "Content-Type" : "multipart/form-data",
             },
@@ -25,6 +26,18 @@ export const postData = createAsyncThunk(
       } catch (error) {
         return thunkAPI.rejectWithValue(error.response.data);
       }
+    }
+);
+
+export const getAllJobs = createAsyncThunk(
+    "career/getAllJobs",
+    async (thunkAPI) => {
+        try {
+            const response = await axios.get("http://localhost:8080/jobs");
+            return response.data.data;
+        } catch (error) {
+            return thunkAPI.rejectWithValue(error.response.data);
+        }
     }
 );
 
@@ -64,6 +77,11 @@ const careerSlice = createSlice({
             state.loading = false;
             state.error = action.payload; // Set the error field with the rejected value
         });
+        builder.addCase(getAllJobs.pending, (state, action) => {
+        });
+        builder.addCase(getAllJobs.fulfilled, (state, action) => {
+            state.jobs = action.payload;
+        })
     },
 });
 

@@ -42,7 +42,7 @@ const Candidate = () => {
                 <caption className="caption-top text-2xl underline mb-3">
                     All Candidates
                 </caption>
-                <thead className="bg-[#797979]">
+                <thead className="bg-[#F5ECE6]">
                     <tr className="lg:text-xl text-base">
                         <th className="border border-slate-300">No</th>
                         <th className="border border-slate-300">Email</th>
@@ -52,7 +52,7 @@ const Candidate = () => {
                         <th className="border border-slate-300">Resume</th>
                     </tr>
                 </thead>
-                <tbody className="bg-[#F5F5F5]">
+                <tbody className="bg-[#F5ECE6]">
                 {
                     data.map((item, key) => {
                     return <tr className="lg:text-lg text-normal">
