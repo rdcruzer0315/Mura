@@ -4,7 +4,7 @@ import ReactModal from "react-modal";
 import { showSignModal, showSignUpModal, signData, signoutData, signupData } from "../../store/Admin";
 import { useState } from "react";
 import MenuComponent from "../Menu/Menu";
-import "./HeaderModal.css";
+import "./style_header.css";
 
 const Header = () => {
 
@@ -76,25 +76,25 @@ const Header = () => {
                     <MenuComponent />
                     <NavLink
                         to="/brand"
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-normal font-weight-500 text-center"
+                        className="text-{2F2F2F} px-12 py-2 rounded-md text-normal font-weight-500 text-center hover:underline"
                     >
                     BRAND STORY
                     </NavLink>
                     <NavLink
                         to="/faq"
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
                     >
                         Q/A
                     </NavLink>
                     <NavLink
                         to="/news"
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
                     >
                         NEWS/EVENT
                     </NavLink>
                     <NavLink
                         to="/careers"
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
                     >
                     CAREERS
                     </NavLink>
@@ -109,13 +109,13 @@ const Header = () => {
                         <>
                         <NavLink
                             to="/candidate"
-                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
                         >
                         CANDIDATES
                         </NavLink>
                         <NavLink
                             to="/manage"
-                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
                         >
                         MANAGEMENT
                         </NavLink>
@@ -131,7 +131,6 @@ const Header = () => {
             shouldCloseOnEsc={true}
             shouldCloseOnOverlayClick={true}
             preventScroll={true}
-            overlayClassName={"ReactModal__Overlay"}
             bodyOpenClassName={"ReactModal__Body--open"}
             htmlOpenClassName={"ReactModal__Html--open"}
             shouldFocusAfterRender={true}
@@ -150,7 +149,7 @@ const Header = () => {
                         Enter Your Information
                     </p>
                     <div className="flex flex-col w-full items-center mt-6">
-                        <div className="lg:w-96 w-full flex flex-col">
+                        <div className="w-full flex flex-col">
                             <p>Your Email<b className="pl-1 text-[#FF0000]">*</b></p>
                             <input
                                 type="email"
@@ -160,7 +159,7 @@ const Header = () => {
                                 onChange={onEmail}
                             />
                         </div>
-                        <div className="lg:w-96 w-full flex flex-col mt-2">
+                        <div className="w-full flex flex-col mt-2">
                             <p>Password<b className="pl-1 text-[#FF0000]">*</b></p>
                             <input
                                 type="password"
@@ -187,7 +186,6 @@ const Header = () => {
             shouldCloseOnEsc={true}
             shouldCloseOnOverlayClick={true}
             preventScroll={true}
-            overlayClassName={"ReactModal__Overlay"}
             bodyOpenClassName={"ReactModal__Body--open"}
             htmlOpenClassName={"ReactModal__Html--open"}
             shouldFocusAfterRender={true}

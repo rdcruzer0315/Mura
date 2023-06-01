@@ -16,6 +16,7 @@ import Cafe from './pages/Menus/Cafe/Cafe';
 import Dinner from './pages/Menus/Dinner/Dinner';
 import Bar from './pages/Menus/Bar/Bar';
 import Candidate from './pages/Candidate/Candidate';
+import Management from './pages/Management/Management';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/careers" element={ <Careers /> } />
           <Route path="/news" element={ <News /> } />
           <Route path="/candidate" element={ <Candidate /> } />
+          <Route path="/manage" element={ <Management /> } />
         </Routes>
         <Footer />
       </Router>

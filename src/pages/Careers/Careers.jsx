@@ -1,30 +1,25 @@
 import Position from "../../components/Position/Position";
 import ReactModal from "react-modal";
 import { useSelector, useDispatch } from "react-redux";
-import { modal_open, set_role_type, submit_appliction } from "../../store/Career";
+import { useEffect } from "react";
+import { modal_open, set_role_type, submit_appliction, getAllJobs } from "../../store/Career";
 import Job_Description from "./steps/Job_Description";
 import Application from "./steps/Application";
-import "./Modal.css";
+import "./style_career.css";
 
 const Careers = () => {
-
-    const role_type_array = new Array(
-        {role: "BAKER", type: "Full Time", time: "Urgent"},
-        {role: "BAKER", type: "Part-Time", time: ""},
-        {role: "CHEF", type: "Full Time", time: ""},
-        {role: "MANAGER", type: "Full Time", time: "Urgent"},
-        {role: "LINE COOK", type: "Part-Time", time: ""},
-        {role: "LINE COOK", type: "Full Time", time: ""},
-        {role: "SERVER", type: "Full Time", time: "Urgent"},
-        {role: "SERVER", type: "Part-Time", time: ""},
-        {role: "SERVER", type: "Full Time", time: ""},
-    );
     
     const open_modal = useSelector((state) => state.career.isOpen);
     const submit_modal = useSelector((state) => state.career.submit)
     const step = useSelector((state) => state.career.step);
 
     const dispatch = useDispatch();
+    const role_type_array = useSelector((state) => state.career.jobs);
+
+    useEffect(() => {
+        dispatch(getAllJobs());
+    }, [dispatch]);
+
 
     const uploadResume = () => {
         dispatch(modal_open());
@@ -67,7 +62,7 @@ const Careers = () => {
                 {
                     role_type_array.map((item, key) => {
                     return <Position 
-                                role = {item.role}
+                                role = {item.title}
                                 type = {item.type}
                                 time = {item.time}
                                 idx = { key + 1 }
@@ -85,14 +80,13 @@ const Careers = () => {
             shouldCloseOnEsc={true}
             shouldCloseOnOverlayClick={true}
             preventScroll={true}
-            overlayClassName={"ReactModal__Overlay"}
             bodyOpenClassName={"ReactModal__Body--open"}
             htmlOpenClassName={"ReactModal__Html--open"}
             shouldFocusAfterRender={true}
             shouldReturnFocusAfterClose={true}
             ariaHideApp={false}
             parentSelector={() => document.body }
-            className="modal_style"
+            className="career_modal"
             overlayClassName="MyOverlay"
         >
             <div className="bg-white">
@@ -130,7 +124,6 @@ const Careers = () => {
                     right: 0,
                     bottom: 0,
                     backgroundColor: 'rgb(0, 0, 0)',
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)'
                 },
                 content: {
                     position: 'absolute',

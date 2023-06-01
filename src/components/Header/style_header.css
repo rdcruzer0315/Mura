@@ -1,0 +1,43 @@
+.MyModal {
+    position: absolute;
+    z-index: 1;
+    overflow: auto;
+    border-radius: 2%;
+    top: 20%;
+    left: 5%;
+    right: 5%;
+    bottom: 20%;
+    padding: 10px;
+    border: 1px solid black;
+    background: #fff;
+    max-width: 600px;
+    margin: auto;
+    outline: none;
+}
+
+.MyOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 600px) {
+    .MyModal {
+        top: 10%;
+        left: 20%;
+        right: 20%;
+        bottom: 10%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .MyModal {
+        top: 28%;
+        left: 25%;
+        right: 25%;
+        bottom: 28%;
+    }
+}

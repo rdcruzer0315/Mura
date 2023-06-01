@@ -2,16 +2,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { resumeModal, resumeUpload, uploadButton } from "../../../store/Upload";
 import ReactModal from "react-modal";
-import { modal_open, postData, submit_appliction } from "../../../store/Career";
-import "./ResumeModal.css";
+import { modal_open, postData } from "../../../store/Career";
+import "./style_resume.css";
 
 const Application = () => {
     const role = useSelector((state) => state.career.role);
     const resumeModalOpen = useSelector((state) => state.upload.resume_modal_open);
     const uploadbtn = useSelector((state) => state.upload.upload_button);
     const uploadApplication = useSelector((state) => state.upload.upload_application);
-    const resume_content = useSelector((state) => state.upload.file_content);
-    const resume_type = useSelector((state) => state.upload.file_type);
+    // const resume_content = useSelector((state) => state.upload.file_content);
+    // const resume_type = useSelector((state) => state.upload.file_type);
 
     const dispatch = useDispatch();
 
@@ -87,7 +87,7 @@ const Application = () => {
                     <input
                         type="button"
                         value="Upload Resume"
-                        className="col-start-2 col-span-4 lg:w-80 lg:h-12 bg-[#F5ECE6] cursor-pointer lg:text-xl text-base p-3 border-none text-center rounded-2xl"
+                        className="col-start-2 col-span-4 lg:w-80 lg:h-12 bg-[#F5ECE6] cursor-pointer lg:text-xl text-base p-3 border-none text-center rounded-lg"
                         onClick={handleUpload}
                     />
                 </div>
@@ -177,7 +177,6 @@ const Application = () => {
             shouldCloseOnEsc={true}
             shouldCloseOnOverlayClick={true}
             preventScroll={true}
-            overlayClassName={"ReactModal__Overlay"}
             bodyOpenClassName={"ReactModal__Body--open"}
             htmlOpenClassName={"ReactModal__Html--open"}
             shouldFocusAfterRender={true}
@@ -186,30 +185,6 @@ const Application = () => {
             parentSelector={() => document.body }
             className="resumeModal"
             overlayClassName="resumeOverlay"
-            // style={{
-            //     overlay: {
-            //         position: 'fixed',
-            //         top: 0,
-            //         left: 0,
-            //         right: 0,
-            //         bottom: 0,
-            //         backgroundColor: 'rgb(0, 0, 0)',
-            //         backgroundColor: 'rgba(0, 0, 0, 0.4)'
-            //     },
-            //     content: {
-            //         position: 'absolute',
-            //         zIndex: 2,
-            //         top: '20%',
-            //         left: '25%',
-            //         right: '25%',
-            //         bottom: '40%',
-            //         border: '1px solid black',
-            //         background: '#fff',
-            //         WebkitOverflowScrolling: 'touch',
-            //         outline: 'none',
-            //         padding: '20px'
-            //     }
-            // }}
             >
                 <div>
                     <div className="flex justify-end cursor-pointer" onClick={closeModal}>
