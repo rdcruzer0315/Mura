@@ -23,7 +23,7 @@ const FAQ = () => {
     return (
         <>
         <div className="bg-[#F5ECE6] pt-20 flex lg:flex-row flex-col">
-            <div className="lg:w-2/3 w-full lg:pl-48 lg:pr-24 lg:pb-24 pl-12 pr-12">
+            <div className="lg:w-2/3 w-full lg:pl-60 lg:pr-24 lg:pb-24 pl-12 pr-12">
                 <p className="lg:pt-20 pt-4 lg:text-5xl text-3xl lg:text-left text-center font-bold text-black">F A Q</p>
                 <p className="text-black lg:text-2xl text-xl lg:text-left text-center leading-relaxed pt-12">
                     Mura has a cafe, brunch and dessert plates with a full bar on the conveyor belt from 10 AM to 5 PM. 
@@ -38,7 +38,7 @@ const FAQ = () => {
                 <img src="assets/Faq/Frame.png" />
             </div>
         </div>
-        <div className="lg:mt-12 mt-8 lg:mx-56 mx-12">
+        <div className="lg:mt-12 mt-8 lg:mx-60 mx-12">
             <Accordion items = { items } />
         </div>
         </>

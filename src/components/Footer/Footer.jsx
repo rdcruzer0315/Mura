@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="mt-10 pb-20 grid lg:grid-cols-3 grid-cols-1">
             <div className="lg:col-start-1 lg:col-span-1 w-full">
                 <p className="font-bold text-black lg:text-2xl text-lg text-center tracking-widest">CONTACT</p>
-                <p className="font-bold text-black lg:text-xl text-xs text-center tracking-widest">+1 813-123-5678</p>
+                {/* <p className="font-bold text-black lg:text-xl text-xs text-center tracking-widest">+1 813-123-5678</p> */}
                 <p className="font-bold text-black lg:text-xl text-xs text-center tracking-widest cursor-pointer">INFO@MURAMB.COM</p>
             </div>
             <div className="lg:col-start-2 lg:col-span-1 w-full lg:mt-0 mt-10">

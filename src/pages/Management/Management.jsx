@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Jobs from './Jobs/Jobs';
 import Faq from './Faq/Faq';
 import Cafe from './Cafe/Cafe';
+import Dinner from './Dinner/Dinner';
+import Bar from './Bar/Bar';
 
 const tabs = ["Jobs", "FAQ", "News", "Cafe", "Dinner", "Bar"];
 const Management = () => {
@@ -37,6 +39,10 @@ const Management = () => {
                             return <Faq />
                         case "Cafe":
                             return <Cafe />
+                        case "Dinner":
+                            return <Dinner />
+                        case "Bar":
+                            return <Bar />
                         default:
                             return null;
                     }

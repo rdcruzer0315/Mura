@@ -75,7 +75,6 @@ const Candidate = () => {
             shouldCloseOnEsc={true}
             shouldCloseOnOverlayClick={true}
             preventScroll={true}
-            overlayClassName={"ReactModal__Overlay"}
             bodyOpenClassName={"ReactModal__Body--open"}
             htmlOpenClassName={"ReactModal__Html--open"}
             shouldFocusAfterRender={true}

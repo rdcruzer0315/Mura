@@ -3,7 +3,7 @@ const Position = ({ role, type, time, idx,  uploadResume, saveRole }) => {
 
     return (
         <>
-        <div className="lg:mx-4 mx-0 lg:my-4 my-2 bg-[#F5ECE6] border border-black rounded-lg p-5">
+        <div className="lg:mx-10 mx-0 lg:my-4 my-2 bg-[#F5ECE6] border border-black rounded-lg p-5">
             <p className="text-black lg:text-3xl text-2xl font-bold">{ role }</p>
             {
                 type === "Full-Time" ? 

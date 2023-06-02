@@ -6,11 +6,11 @@ const initialState = {
     images: [],
 }
 
-export const getCafeImages = createAsyncThunk(
-    "cafe/getCafe",
+export const getBarImages = createAsyncThunk(
+    "bar/getBar",
     async (thunkAPI) => {
         try {
-            const response = await fetch("http://localhost:8080/cafe/images");
+            const response = await fetch("http://localhost:8080/bar/images");
             return response.json();
         } catch (error) {
             return thunkAPI.rejectWithValue(error.response.data);
@@ -18,11 +18,11 @@ export const getCafeImages = createAsyncThunk(
     }
 );
 
-const cafeSlice = createSlice({
-    name: "cafe",
+const barSlice = createSlice({
+    name: "bar",
     initialState,
     reducers: {
-        showCafeModal: (state) => {
+        showBarModal: (state) => {
             if (state.isOpenModal)
                 state.file = null;
             state.isOpenModal = !state.isOpenModal;
@@ -36,13 +36,13 @@ const cafeSlice = createSlice({
         }
     },
     extraReducers: (builder) => {
-        builder.addCase(getCafeImages.pending, (state, action) => {
+        builder.addCase(getBarImages.pending, (state, action) => {
         });
-        builder.addCase(getCafeImages.fulfilled, (state, action) => {
+        builder.addCase(getBarImages.fulfilled, (state, action) => {
             state.images = action.payload;
-        });
+        })
     }
 });
 
-export const { showCafeModal, showApplyButton, showApply } = cafeSlice.actions;
-export default cafeSlice.reducer;
+export const { showBarModal, showApplyButton, showApply } = barSlice.actions;
+export default barSlice.reducer;
