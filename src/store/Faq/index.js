@@ -10,7 +10,7 @@ export const getFaqs = createAsyncThunk(
     "faq/getFaqs",
     async (thunkAPI) => {
         try {
-            const response = await axios.get("http://localhost:8080/faqs");
+            const response = await axios.get("/api/faqs");
             return response.data.data;
         } catch (error) {
             return thunkAPI.rejectWithValue(error.response.data);
@@ -22,7 +22,7 @@ export const postNewFaq = createAsyncThunk(
     "faq/postNewFaq",
     async (data, thunkAPI) => {
       try {
-        const response = await axios.post("http://localhost:8080/newFaq", data);
+        const response = await axios.post("/api/newFaq", data);
         return response.data;
       } catch (error) {
         return thunkAPI.rejectWithValue(error.response.data);
@@ -34,7 +34,7 @@ export const deleteFaq = createAsyncThunk(
     "faq/deleteFaq",
     async (data, thunkAPI) => {
         try {
-            const response = await axios.post("http://localhost:8080/deleteFaq", data);
+            const response = await axios.post("/api/deleteFaq", data);
             return response.data;
         } catch (error) {
             return thunkAPI.rejectWithValue(error.response.data);

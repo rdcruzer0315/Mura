@@ -10,7 +10,7 @@ export const getJobs = createAsyncThunk(
     "job/getJobs",
     async (thunkAPI) => {
         try {
-            const response = await axios.get("http://localhost:8080/jobs");
+            const response = await axios.get("/api/jobs");
             return response.data.data;
         } catch (error) {
             return thunkAPI.rejectWithValue(error.response.data);
@@ -22,7 +22,7 @@ export const postNewJob = createAsyncThunk(
     "job/postNewJob",
     async (data, thunkAPI) => {
       try {
-        const response = await axios.post("http://localhost:8080/newJob", data);
+        const response = await axios.post("/api/newJob", data);
         return response.data;
       } catch (error) {
         return thunkAPI.rejectWithValue(error.response.data);
@@ -34,7 +34,7 @@ export const deleteJob = createAsyncThunk(
     "job/deleteJob",
     async (data, thunkAPI) => {
         try {
-            const response = await axios.post("http://localhost:8080/deleteJob", data);
+            const response = await axios.post("/api/deleteJob", data);
             return response.data;
         } catch (error) {
             return thunkAPI.rejectWithValue(error.response.data);
