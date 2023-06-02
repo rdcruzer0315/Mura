@@ -1,30 +1,31 @@
 import { useDispatch, useSelector } from "react-redux";
-import { getCafeImages, showApply, showApplyButton, showCafeModal } from "../../../store/Cafe";
 import ReactModal from "react-modal";
-import "./style_cafe.css";
+import "./style_dinner.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { getDinnerImages, showDinnerModal, showApply, showApplyButton } from "../../../store/Dinner";
 
-const Cafe = () => {
+const Dinner = () => {
 
     const dispatch = useDispatch();
 
-    const isOpenModal = useSelector((state) => state.cafe.isOpenModal);
-    const isShowButton = useSelector((state) => state.cafe.isShowButton);
-    const file = useSelector((state) => state.cafe.file);
+    const isOpenModal = useSelector((state) => state.dinner.isOpenModal);
+    const isShowButton = useSelector((state) => state.dinner.isShowButton);
+    
+    const file = useSelector((state) => state.dinner.file);
     const [image, setImage] = useState(null);
 
     useEffect(() => {
-        dispatch(getCafeImages());
+        dispatch(getDinnerImages());
     }, []);
 
     const onNewImage = () => {
-        dispatch(showCafeModal());
+        dispatch(showDinnerModal());
     }
 
     const closeModal = () => {
         setImage(null);
-        dispatch(showCafeModal());
+        dispatch(showDinnerModal());
         dispatch(showApply());
     }
 
@@ -48,7 +49,7 @@ const Cafe = () => {
         formData.append('image', file);
     
         try {
-            await axios.post('http://localhost:8080/cafeImageUpload', formData, {
+            await axios.post('http://localhost:8080/dinnerImageUpload', formData, {
                 headers: {
                 'Content-Type': 'multipart/form-data',
                 },
@@ -58,22 +59,22 @@ const Cafe = () => {
             console.log('Error uploading image:', error);
         }
         setImage(null);
-        dispatch(showCafeModal());
+        dispatch(showDinnerModal());
         dispatch(showApply());
-        dispatch(getCafeImages());
+        dispatch(getDinnerImages());
     };
 
     const onDelete = async (imageID) => {
         try {
             let data = { id: imageID}
-            await axios.post("http://localhost:8080/cafe/imageDelete", data);
+            await axios.post("http://localhost:8080/dinner/imageDelete", data);
         } catch (error) {
             console.log("Error uploading image:", error);
         }
-        dispatch(getCafeImages());
+        dispatch(getDinnerImages());
     }
 
-    const imageData = useSelector((state) => state.cafe.images);
+    const imageData = useSelector((state) => state.dinner.images);
 
     return (
         <>
@@ -109,7 +110,7 @@ const Cafe = () => {
             shouldReturnFocusAfterClose={true}
             ariaHideApp={false}
             parentSelector={() => document.body }
-            className="style_cafe"
+            className="style_dinner"
             overlayClassName="MyOverlay"
         >
             <div className="bg-white">
@@ -150,4 +151,4 @@ const Cafe = () => {
     )
 }
 
-export default Cafe;
+export default Dinner;

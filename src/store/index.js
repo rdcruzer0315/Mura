@@ -6,6 +6,8 @@ import menuReducer from "./Menu";
 import jobReducer from "./Job";
 import faqReducer from "./Faq";
 import cafeReducer from "./Cafe";
+import dinnerReducer from "./Dinner";
+import barReducer from "./Bar";
 
 export const store = configureStore({
     reducer: {
@@ -16,5 +18,7 @@ export const store = configureStore({
         job: jobReducer,
         faq: faqReducer,
         cafe: cafeReducer,
+        dinner: dinnerReducer,
+        bar: barReducer,
     },
 });

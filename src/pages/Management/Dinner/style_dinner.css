@@ -1,0 +1,43 @@
+.style_dinner {
+    position: absolute;
+    overflow: auto;
+    z-index: 10;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    border: 1px solid black;
+    border-radius: 1%;
+    background: #fff;
+    -webkit-overflow-scrolling: "touch";
+    outline: 'none';
+    padding: 20px;
+    margin: auto;
+}
+
+.MyOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 600px) {
+    .style_dinner {
+        top: 10%;
+        left: 30%;
+        right: 30%;
+        bottom: 10%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .style_dinner {
+        top: 25%;
+        left: 30%;
+        right: 30%;
+        bottom: 25%;
+    }
+}
