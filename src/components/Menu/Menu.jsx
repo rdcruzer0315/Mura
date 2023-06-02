@@ -31,9 +31,9 @@ function MenuComponent() {
       </div>
       {menuOpen && (
         <ul id="dropdownMenu" className="absolute z-10 mt-2 py-2 w-40 lg:bg-transparent bg-white rounded-md">
-          <li><NavLink to="/cafe" className="block py-2 lg:pl-0 pl-3 hover:underline">CAFE MENU</NavLink></li>
-          <li><NavLink to="/dinner" className="block py-2 lg:pl-0 pl-3 hover:underline">DINNER MENU</NavLink></li>
-          <li><NavLink to="/bar" className="block py-2 lg:pl-0 pl-3 hover:underline">BAR MENU</NavLink></li>
+          <li><NavLink to="/cafe" onClick={() => setMenuOpen(false)} className="block py-2 lg:pl-0 pl-3 hover:underline">CAFE MENU</NavLink></li>
+          <li><NavLink to="/dinner" onClick={() => setMenuOpen(false)} className="block py-2 lg:pl-0 pl-3 hover:underline">DINNER MENU</NavLink></li>
+          <li><NavLink to="/bar" onClick={() => setMenuOpen(false)} className="block py-2 lg:pl-0 pl-3 hover:underline">BAR MENU</NavLink></li>
         </ul>
       )}
     </div>
