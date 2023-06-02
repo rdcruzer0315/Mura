@@ -1,6 +1,7 @@
 // src/TabMenu.js
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import Jobs from './Jobs/Jobs';
 import Faq from './Faq/Faq';
 import Cafe from './Cafe/Cafe';
@@ -10,6 +11,12 @@ import Bar from './Bar/Bar';
 const tabs = ["Jobs", "FAQ", "News", "Cafe", "Dinner", "Bar"];
 const Management = () => {
     const [activeTab, setActiveTab] = useState(tabs[0]);
+    const sign_state = useSelector((state) => state.admin.isSign);
+
+    useEffect(() => {
+        if (!sign_state)
+            window.location.href = "/";
+    }, [sign_state]);
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
