@@ -10,7 +10,7 @@ export const getDinnerImages = createAsyncThunk(
     "dinner/getDinner",
     async (thunkAPI) => {
         try {
-            const response = await fetch("http://localhost:8080/dinner/images");
+            const response = await fetch("/api/dinner/images");
             return response.json();
         } catch (error) {
             return thunkAPI.rejectWithValue(error.response.data);

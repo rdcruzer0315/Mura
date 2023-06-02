@@ -49,7 +49,7 @@ const Bar = () => {
         formData.append('image', file);
     
         try {
-            await axios.post('http://localhost:8080/barImageUpload', formData, {
+            await axios.post('/api/barImageUpload', formData, {
                 headers: {
                 'Content-Type': 'multipart/form-data',
                 },
@@ -67,7 +67,7 @@ const Bar = () => {
     const onDelete = async (imageID) => {
         try {
             let data = { id: imageID}
-            await axios.post("http://localhost:8080/bar/imageDelete", data);
+            await axios.post("/api/bar/imageDelete", data);
         } catch (error) {
             console.log("Error uploading image:", error);
         }

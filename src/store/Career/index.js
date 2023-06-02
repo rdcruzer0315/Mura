@@ -16,7 +16,7 @@ export const postData = createAsyncThunk(
     "career/postData",
     async (data, thunkAPI) => {
       try {
-        const response = await axios.post("http://localhost:8080/submit", data, {
+        const response = await axios.post("/api/submit", data, {
             headers: {
                 "Content-Type" : "multipart/form-data",
             },
@@ -33,7 +33,7 @@ export const getAllJobs = createAsyncThunk(
     "career/getAllJobs",
     async (thunkAPI) => {
         try {
-            const response = await axios.get("http://localhost:8080/jobs");
+            const response = await axios.get("/api/jobs");
             return response.data.data;
         } catch (error) {
             return thunkAPI.rejectWithValue(error.response.data);
