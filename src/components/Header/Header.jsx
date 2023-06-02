@@ -98,12 +98,12 @@ const Header = () => {
                     >
                     CAREERS
                     </NavLink>
-                    <NavLink
+                    {/* <NavLink
                         onClick={onShowSignUpModal}
                         className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
                     >
                     SignUp
-                    </NavLink>
+                    </NavLink> */}
                     {
                     sign_state ?
                         <>
