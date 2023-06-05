@@ -2,7 +2,8 @@
 const News = () => {
     return (
         <>
-        <div className="lg:mt-24 bg-[#F5ECE6] grid lg:grid-cols-9 lg:mx-0">
+        <div className="lg:mt-24 mt-12 bg-[#F5ECE6] lg:mx-0">
+            <p className="lg:text-4xl text-2xl font-bold text-center">Coming Soon!</p>
         </div>
         </>
     )
