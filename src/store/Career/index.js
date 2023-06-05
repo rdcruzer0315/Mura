@@ -2,14 +2,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-    step: 1,
-    isOpen: false,
-    role: "",
-    type: "",
-    idx: 0,
-    submit: false,
-    loading: false,
-    jobs: [],
 }
 
 export const postData = createAsyncThunk(
@@ -29,40 +21,10 @@ export const postData = createAsyncThunk(
     }
 );
 
-export const getAllJobs = createAsyncThunk(
-    "career/getAllJobs",
-    async (thunkAPI) => {
-        try {
-            const response = await axios.get("/api/jobs");
-            return response.data.data;
-        } catch (error) {
-            return thunkAPI.rejectWithValue(error.response.data);
-        }
-    }
-);
-
 const careerSlice = createSlice({
     name: "career",
     initialState,
     reducers: {
-        modal_open: (state) => {
-            if (state.isOpen) {
-                state.step = 1;
-            }
-            state.isOpen = !state.isOpen;
-        },
-        set_role_type: (state, action) => {
-            state.role = action.payload.role;
-            state.type = action.payload.type;
-            state.idx = action.payload.idx;
-        },
-        step_forward : (state) => {
-            state.step ++;
-        },
-        submit_appliction: (state, action) => {
-            console.log(action.payload);
-            state.submit = !state.submit;
-        }
     },
     extraReducers: (builder) => {
         builder.addCase(postData.pending, (state, action) => {
@@ -77,19 +39,10 @@ const careerSlice = createSlice({
             state.loading = false;
             state.error = action.payload; // Set the error field with the rejected value
         });
-        builder.addCase(getAllJobs.pending, (state, action) => {
-        });
-        builder.addCase(getAllJobs.fulfilled, (state, action) => {
-            state.jobs = action.payload;
-        })
     },
 });
 
 export const { 
-    modal_open, 
-    set_role_type, 
-    step_forward, 
-    submit_appliction 
 } = careerSlice.actions;
 
 export default careerSlice.reducer;

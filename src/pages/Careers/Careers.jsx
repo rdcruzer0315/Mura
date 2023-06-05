@@ -1,42 +1,53 @@
-import Position from "../../components/Position/Position";
-import ReactModal from "react-modal";
-import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { modal_open, set_role_type, submit_appliction, getAllJobs } from "../../store/Career";
-import Job_Description from "./steps/Job_Description";
-import Application from "./steps/Application";
-import "./style_career.css";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { postData } from "../../store/Career";
 
 const Careers = () => {
-    
-    const open_modal = useSelector((state) => state.career.isOpen);
-    const submit_modal = useSelector((state) => state.career.submit)
-    const step = useSelector((state) => state.career.step);
 
     const dispatch = useDispatch();
-    const role_type_array = useSelector((state) => state.career.jobs);
+    const [name, setName] = useState("");
+    const [position, setPosition] = useState("");
+    const [phone, setPhone] = useState("");
+    const [email, setEmail] = useState("");
+    const [resume, setResume] = useState();
+    const [subdata, setSubdata] = useState(null);
 
-    useEffect(() => {
-        dispatch(getAllJobs());
-    }, [dispatch]);
-
-
-    const uploadResume = () => {
-        dispatch(modal_open());
+    const onName = (e) => {
+        setName(e.target.value);
     }
 
-    const saveRole = (role, type, idx) => {
-        dispatch(set_role_type({role: role, type: type, idx: idx}));
+    const onPosition = (e) => {
+        setPosition(e.target.value);
     }
 
-    const closeModal = (e) => {
-        e.preventDefault();
-        dispatch(modal_open());
+    const onPhone = (e) => {
+        setPhone(e.target.value);
     }
 
-    const onGotit = (e) => {
-        e.preventDefault();
-        dispatch(submit_appliction());
+    const onEmail = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const onFileUpload = (e) => {
+        let files = e.target.files;
+        setResume(files[0].name);
+        setSubdata(files[0]);
+        // dispatch(uploadButton(files[0]));
+    }
+
+    const onSubmit = (e) => {
+        if ( name === "" || phone === "" || email === "" || position === "") {
+
+        } else {
+            const formData = new FormData();
+            formData.append("file", subdata);
+            formData.append("name", name);
+            formData.append("position", position);
+            formData.append("phone", phone);
+            formData.append("email", email);
+            dispatch(postData(formData));
+            console.log(formData);
+        }
     }
 
     return (
@@ -56,108 +67,71 @@ const Careers = () => {
                 </div>
             </div>
         </div>
-        <div className="lg:mx-60 mx-6 lg:my-16 my-8">
-            <p className="lg:text-5xl text-3xl text-black font-bold text-center">Browse Open Positions</p>
-            <div className="grid lg:grid-cols-3 grid-cols-1">
-                {
-                    role_type_array.map((item, key) => {
-                    return <Position 
-                                role = {item.title}
-                                type = {item.type}
-                                time = {item.time}
-                                idx = { key + 1 }
-                                uploadResume={uploadResume}
-                                saveRole={saveRole}
-                            />
-                    })
-                }
-            </div>
-        </div>
-        {
-        open_modal ? 
-        <ReactModal
-            isOpen={open_modal}
-            shouldCloseOnEsc={true}
-            shouldCloseOnOverlayClick={true}
-            preventScroll={true}
-            bodyOpenClassName={"ReactModal__Body--open"}
-            htmlOpenClassName={"ReactModal__Html--open"}
-            shouldFocusAfterRender={true}
-            shouldReturnFocusAfterClose={true}
-            ariaHideApp={false}
-            parentSelector={() => document.body }
-            className="career_modal"
-            overlayClassName="MyOverlay"
-        >
-            <div className="bg-white">
-                <div className="flex justify-end cursor-pointer" onClick={closeModal}>
-                    <img src="assets/close.svg" alt="close"/>
-                </div>
-                <div className="flex justify-center">
-                    <img className="lg:w-1/3 w-1/2 lg:mt-6" src="assets/Logo/logo.png" alt="logo"/>
-                </div>
-                {
-                    step === 1 ? <Job_Description /> : <Application />
-                }
-            </div>
-        </ReactModal> : null
-        }
-        {
-        submit_modal ? 
-        <ReactModal
-            isOpen={submit_modal}
-            shouldCloseOnEsc={true}
-            shouldCloseOnOverlayClick={true}
-            preventScroll={true}
-            overlayClassName={"ReactModal__Overlay"}
-            bodyOpenClassName={"ReactModal__Body--open"}
-            htmlOpenClassName={"ReactModal__Html--open"}
-            shouldFocusAfterRender={true}
-            shouldReturnFocusAfterClose={true}
-            ariaHideApp={false}
-            parentSelector={() => document.body }
-            style={{
-                overlay: {
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    backgroundColor: 'rgb(0, 0, 0)',
-                },
-                content: {
-                    position: 'absolute',
-                    zIndex: 1,
-                    top: '30%',
-                    left: '25%',
-                    right: '25%',
-                    bottom: '30%',
-                    border: '1px solid black',
-                    background: '#fff',
-                    WebkitOverflowScrolling: 'touch',
-                    outline: 'none',
-                    padding: '20px'
-                }
-            }}
-        >
-            <div className="bg-white">
-                <div className="px-10 py-6 flex flex-col items-center">
-                    <p className="font-bold text-black lg:text-3xl text-xl text-center">
-                        Application Submitted!
-                    </p>
-                    <p className="font-semibold text-black text-lg text-center px-20 lg:mt-8 mt-4">
-                        Thank you for your interest and taking the time to submit an application. We will reach out to you within the next 3-5 business days.
-                    </p>
+        <div className="lg:mt-16 mt-8">
+            <p className="lg:text-5xl text-3xl text-black font-bold text-center">Join Our Team</p>
+            <div className="lg:mx-96 mx-2 lg:p-8 p-2 lg:mt-8 mt-4 border border-black rounded">
+                <div className="w-full flex flex-row items-center justify-start">
+                    <p className="w-1/4">Name:<b className="pl-1 text-[#FF0000]">*</b></p>
                     <input
-                        type="button"
-                        value="Got it!"
-                        className="lg:mt-12 mt-4 lg:w-60 lg:h-12 bg-[#F38117] cursor-pointer lg:text-xl text-white text-base p-3 border-none text-center rounded-md"
-                        onClick={onGotit}
+                        type="text"
+                        value={name}
+                        onChange={onName}
+                        className="w-full ml-3 bg-[#D9D9D9] text-base p-2 border-none rounded-md"
                     />
                 </div>
+                <div className="w-full flex flex-row items-center justify-start mt-2">
+                    <p className="w-1/4">Position:<b className="pl-1 text-[#FF0000]">*</b></p>
+                    <input
+                        type="text"
+                        value={position}
+                        onChange={onPosition}
+                        className="w-full ml-3 bg-[#D9D9D9] text-base p-2 border-none rounded-md"
+                    />
+                </div>
+                <div className="w-full flex flex-row items-center justify-start mt-2">
+                    <p className="w-1/4">Phone:<b className="pl-1 text-[#FF0000]">*</b></p>
+                    <input
+                        type="text"
+                        value={phone}
+                        onChange={onPhone}
+                        className="w-full ml-3 bg-[#D9D9D9] text-base p-2 border-none rounded-md"
+                    />
+                </div>
+                <div className="w-full flex flex-row items-center justify-start mt-2">
+                    <p className="w-1/4">Email:<b className="pl-1 text-[#FF0000]">*</b></p>
+                    <input
+                        type="text"
+                        value={email}
+                        onChange={onEmail}
+                        className="w-full ml-3 bg-[#D9D9D9] text-base p-2 border-none rounded-md"
+                    />
+                </div>
+                <div className="w-full flex flex-row items-center justify-start mt-2">
+                    <p className="w-1/4">Resume:<b className="pl-1 text-[#FF0000]">*</b></p>
+                    <div className="w-full ml-3 bg-[#D9D9D9] text-base lg:p-2 p-1 border-none rounded-md">
+                        <div className="w-1/2">
+                            <input 
+                                accept=".doc, .docx, .pdf" 
+                                id="icon-button-file" 
+                                type="file"
+                                className="hidden"
+                                onChange={onFileUpload}
+                                required={true} 
+                            />
+                            <label htmlFor="icon-button-file">
+                                <div className="border border-solid border-black rounded">
+                                    <p className="text-black text-base text-center p-1">Upload File</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div className="w-1/2 bg-[#D9D9D9] rounded-sm" />
+                    </div>
+                </div>
+                <div className="mt-4 flex justify-center">
+                    <button onClick={onSubmit} className="bg-black rounded-full lg:w-1/3 w-2/5 py-2 text-base text-white">SUBMIT</button>
+                </div>
             </div>
-        </ReactModal> : null
-        }
+        </div>
         </>
     )
 }

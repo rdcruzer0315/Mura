@@ -8,8 +8,7 @@ const initialState = {
     email: "",
     password: "",
     candidates: [],
-    coverletter_modal: false,
-    coverletter: "",
+    position: "",
 }
 
 export const signData = createAsyncThunk(
@@ -88,13 +87,6 @@ const adminSlice = createSlice({
         showSignUpModal: (state) => {
             state.isOpenSignupModal = !state.isOpenSignupModal;
         },
-        showCoverletterModal: (state, action) => {
-            state.coverletter_modal = true;
-            state.coverletter = action.payload;
-        },
-        hideCoverletterModal: (state) => {
-            state.coverletter_modal = false;
-        },
         signoutData: (state) => {
             state.isSign = false;
         }
@@ -129,5 +121,5 @@ const adminSlice = createSlice({
     }
 });
 
-export const { showSignModal, showSignUpModal, showCoverletterModal, hideCoverletterModal, signoutData } = adminSlice.actions;
+export const { showSignModal, showSignUpModal, signoutData } = adminSlice.actions;
 export default adminSlice.reducer;
