@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import MapView from "../MapView/MapView";
 
 const Footer = () => {
@@ -10,11 +11,11 @@ const Footer = () => {
             <div className="lg:col-start-1 lg:col-span-1 w-full">
                 <p className="font-bold text-black lg:text-2xl text-lg text-center tracking-widest">CONTACT</p>
                 <div className="flex flex-row items-center justify-center lg:mt-8 mt-3 cursor-pointer">
-                    <img className="lg:w-6 w-4" src="assets/email.png" />
-                    <p className="font-bold text-black ml-4 lg:text-xl text-xs text-center tracking-widest">+1 813-123-5678</p>
+                    <img className="lg:w-6 w-4" src="assets/phone.png" />
+                    <p className="font-bold text-[#F5ECE6] ml-4 lg:text-xl text-xs text-center tracking-widest">+1 _______________</p>
                 </div>
                 <div className="flex flex-row items-center justify-center cursor-pointer">
-                    <img className="lg:w-6 w-4" src="assets/phone.png" />
+                    <img className="lg:w-6 w-4" src="assets/email.png" />
                     <p className="font-bold text-black ml-4 lg:text-xl text-xs text-center tracking-widest">INFO@MURAMB.COM</p>
                 </div>
             </div>
@@ -28,8 +29,8 @@ const Footer = () => {
             <div className="lg:col-start-3 lg:col-span-1 w-full lg:mt-0 mt-10">
                 <p className="font-bold text-black lg:text-2xl text-lg text-center tracking-widest">CONNECT WITH US</p>
                 <div className="flex flex-row justify-center lg:mt-8 mt-3">
-                    <img className="cursor-pointer lg:w-8 lg:h-8 w-5 h-5" src="assets/Home/instagram.png" alt="instagram" />
-                    <img className="cursor-pointer lg:w-8 lg:h-8 w-5 h-5 ml-5" src="assets/Home/social.png" alt="instagram" />
+                    <a href="https://instagram.com/mura_myrtlebeach?igshid=MzRlODBiNWFlZA=="><img className="cursor-pointer lg:w-8 lg:h-8 w-5 h-5" src="assets/Home/instagram.png" alt="instagram" /></a>
+                    <a href="https://www.facebook.com/profile.php?id=100093174541363&mibextid=ZbWKwL"><img className="cursor-pointer lg:w-8 lg:h-8 w-5 h-5 ml-5" src="assets/Home/social.png" alt="facebook" /></a>
                 </div>
             </div>
         </div>
