@@ -109,7 +109,7 @@ const Header = () => {
                         <>
                         <NavLink
                             to="/candidate"
-                            className="text-black hover:text-[#CBBAAB] hover:text-white px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
+                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
                         >
                         CANDIDATES
                         </NavLink>
