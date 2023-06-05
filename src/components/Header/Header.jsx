@@ -76,31 +76,31 @@ const Header = () => {
                     <MenuComponent />
                     <NavLink
                         to="/brand"
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-normal font-weight-500 text-center hover:underline"
+                        className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-normal font-weight-500 text-center hover:underline"
                     >
                     BRAND STORY
                     </NavLink>
                     <NavLink
-                        to="/faq"
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
-                    >
-                        Q/A
-                    </NavLink>
-                    <NavLink
                         to="/news"
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
+                        className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
                     >
                         NEWS/EVENT
                     </NavLink>
                     <NavLink
+                        to="/faq"
+                        className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
+                    >
+                        FAQS
+                    </NavLink>
+                    <NavLink
                         to="/careers"
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
+                        className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
                     >
                     CAREERS
                     </NavLink>
                     {/* <NavLink
                         onClick={onShowSignUpModal}
-                        className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                        className="text-black px-12 py-2 rounded-md text-base font-weight-500 text-center"
                     >
                     SignUp
                     </NavLink> */}
@@ -109,13 +109,13 @@ const Header = () => {
                         <>
                         <NavLink
                             to="/candidate"
-                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
+                            className="text-black hover:text-[#CBBAAB] hover:text-white px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
                         >
                         CANDIDATES
                         </NavLink>
                         <NavLink
                             to="/manage"
-                            className="text-{2F2F2F} px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
+                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
                         >
                         MANAGEMENT
                         </NavLink>
