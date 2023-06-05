@@ -16,7 +16,7 @@ const Dinner = () => {
         <div className='bg-[#F5ECE6] lg:mx-60 mx-4'>
             <div className="lg:mt-24 mt-10 flex lg:flex-row flex-col justify-center items-center">
                 <div className="lg:w-1/2 w-full lg:pr-5">
-                    <p className="lg:text-4xl text-2xl font-bold">Browse dinner Menu</p>
+                    <p className="lg:text-4xl text-2xl font-bold">Browse Dinner Menu</p>
                     <p className="lg:text-xl text-lg font-medium lg:pt-10 pt-5">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat mi, aliquet ut consequat eu, fermentum non enim. Praesent felis ex, tempor ac pellentesque mollis, pulvinar sit amet nunc. Morbi lacinia viverra arcu at pellentesque. 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat mi, aliquet ut consequat eu, fermentum non enim. Praesent felis ex, tempor ac pellentesque mollis, pulvinar sit amet nunc. Morbi lacinia viverra arcu at pellentesque. 
