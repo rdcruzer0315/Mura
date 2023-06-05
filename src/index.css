@@ -3,13 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: DIDOT;
-  src: url(./assets/fonts/didot/Didot_Regular.ttf);
-}
-
-@font-face {
-  font-family: Prodisplay;
-  src: url(./assets/fonts/SFPRODISPLAYREGULAR.OTF) format("otf");
+  font-family: GillSans;
+  src: url(./assets/fonts/GillSans.ttc);
 }
 
 @layer utilities {
@@ -21,7 +16,7 @@
 
 body {
   margin: 0;
-  font-family: Prodisplay;
+  font-family: GillSans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
