@@ -14,7 +14,7 @@ const Footer = () => {
                     <img className="lg:w-6 w-4" src="assets/phone.png" />
                     <p className="font-bold text-[#F5ECE6] ml-4 lg:text-xl text-xs text-center tracking-widest">+1 _______________</p>
                 </div>
-                <div className="flex flex-row items-center justify-center cursor-pointer">
+                <div className="flex flex-row items-center justify-center cursor-pointer lg:mt-3 mt-1">
                     <img className="lg:w-6 w-4" src="assets/email.png" />
                     <p className="font-bold text-black ml-4 lg:text-xl text-xs text-center tracking-widest">INFO@MURAMB.COM</p>
                 </div>
