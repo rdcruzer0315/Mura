@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
+    resume: "",
 }
 
 export const postData = createAsyncThunk(
@@ -25,6 +26,10 @@ const careerSlice = createSlice({
     name: "career",
     initialState,
     reducers: {
+        setResumeName: (state, action) => {
+            console.log(action.payload);
+            state.resume = action.payload;
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(postData.pending, (state, action) => {
@@ -42,7 +47,8 @@ const careerSlice = createSlice({
     },
 });
 
-export const { 
+export const {
+    setResumeName,
 } = careerSlice.actions;
 
 export default careerSlice.reducer;

@@ -1,6 +1,6 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { postData } from "../../store/Career";
+import { postData, setResumeName } from "../../store/Career";
 
 const Careers = () => {
 
@@ -9,7 +9,7 @@ const Careers = () => {
     const [position, setPosition] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
-    const [resume, setResume] = useState();
+    const [resume, setResume] = useState("");
     const [subdata, setSubdata] = useState(null);
 
     const onName = (e) => {
@@ -31,9 +31,11 @@ const Careers = () => {
     const onFileUpload = (e) => {
         let files = e.target.files;
         setResume(files[0].name);
+        dispatch(setResumeName(files[0].name));
         setSubdata(files[0]);
-        // dispatch(uploadButton(files[0]));
     }
+
+    const resume_name = useSelector((state) => state.career.resume);
 
     const onSubmit = (e) => {
         if ( name === "" || phone === "" || email === "" || position === "") {
@@ -46,7 +48,12 @@ const Careers = () => {
             formData.append("phone", phone);
             formData.append("email", email);
             dispatch(postData(formData));
-            console.log(formData);
+            setName("");
+            setEmail("");
+            setPhone("");
+            setPosition("");
+            setResume("");
+            setSubdata("");
         }
     }
 
@@ -108,7 +115,7 @@ const Careers = () => {
                 </div>
                 <div className="w-full flex flex-row items-center justify-start mt-2">
                     <p className="w-1/4">Resume:<b className="pl-1 text-[#FF0000]">*</b></p>
-                    <div className="w-full ml-3 bg-[#D9D9D9] text-base lg:p-2 p-1 border-none rounded-md">
+                    <div className="w-full flex flex-row items-center ml-3 bg-[#D9D9D9] text-base lg:p-2 p-1 border-none rounded-md">
                         <div className="w-1/2">
                             <input 
                                 accept=".doc, .docx, .pdf" 
@@ -124,7 +131,9 @@ const Careers = () => {
                                 </div>
                             </label>
                         </div>
-                        <div className="w-1/2 bg-[#D9D9D9] rounded-sm" />
+                        <div className="w-1/2 bg-[#D9D9D9] rounded-sm flex justify-center items-center" >
+                            <p className="text-center">{resume_name}</p>
+                        </div>
                     </div>
                 </div>
                 <div className="mt-4 flex justify-center">
