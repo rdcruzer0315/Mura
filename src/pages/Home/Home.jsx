@@ -36,7 +36,6 @@ const Home = () => {
             <div className="w-1/2 flex flex-col justify-center items-center">
                 <p className="font-bold text-black lg:text-5xl text-lg text-center">CAFE MENU</p>
                 <p className="font-semibold text-black lg:text-xl text-xs text-center lg:mt-6 mt-3">Open - 7 PM</p>
-                <p className="font-semibold text-black lg:text-xl text-xs text-center lg:mt-6 mt-3">5 PM - Close</p>
                 <NavLink to="/cafe" className="flex justify-center">
                     <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
                 </NavLink>
