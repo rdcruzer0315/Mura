@@ -94,6 +94,7 @@
   @media (min-width: 1023px) {
     .menuItems {
         flex-direction: row;
+        align-items: center;
     }
   }
   
