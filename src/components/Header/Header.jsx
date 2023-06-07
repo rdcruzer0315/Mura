@@ -61,7 +61,7 @@ const Header = () => {
             {
                 sign_state ? null :
                     <NavLink
-                        className="text-{2F2F2F} lg:mt-6 lg:mr-6 mt-2 mr-2 px-6 py-2 border border-1 border-black rounded-md text-base font-weight-500 text-center"
+                        className="text-white bg-black lg:mt-6 mt-4 lg:mr-6 mt-2 mr-2 lg:px-6 px-4 lg:py-2 py-1 border border-1 border-black rounded-full text-base font-weight-500 text-center"
                         onClick={onAdmin}
                     >
                     SIGN IN
