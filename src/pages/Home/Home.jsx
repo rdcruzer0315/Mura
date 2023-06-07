@@ -19,7 +19,7 @@ const Home = () => {
         <div className="lg:mt-40 mt-20 flex lg:flex-row">
             <div className="w-1/2 relative flex justify-start items-center">
                 <img className="w-full" src="assets/Home/cafe.png" alt="cafe"/>
-                <div className="absolute h-full w-full lg:py-12 py-2 lg:pr-16 pr-3 left-0">
+                <div className="absolute h-full w-full xl:py-12 lg:py-7 md:py-6 py-2 xl:pr-16 lg:pr-9 md:pr-8 pr-3 left-0">
                     <img className="h-full w-full rounded-r-full" src="assets/Home/cafe_back.png" />
                 </div>
             </div>
@@ -42,7 +42,7 @@ const Home = () => {
             </div>
             <div className="w-1/2 relative flex justify-end items-center">
                 <img className="w-full" src="assets/Home/dinner.png" alt="cafe"/>
-                <div className="absolute h-full w-full lg:py-12 py-2 lg:pl-16 pl-3 right-0">
+                <div className="absolute h-full w-full xl:py-12 lg:py-7 md:py-6 py-2 xl:pl-16 lg:pl-9 md:pl-8 pl-3 right-0">
                     <img className="h-full w-full rounded-l-full" src="assets/Home/dinner_back.png" />
                 </div>
             </div>
@@ -50,7 +50,7 @@ const Home = () => {
         <div className="lg:mt-10 mt-5 flex flex-row">
             <div className="w-1/2 relative flex justify-start items-center">
                 <img className="w-full" src="assets/Home/bar.png" alt="cafe"/>
-                <div className="absolute h-full w-full lg:py-12 py-2 lg:pr-16 pr-3 left-0">
+                <div className="absolute h-full w-full xl:py-12 lg:py-7 md:py-6 py-2 xl:pr-16 lg:pr-9 md:pr-8 pr-3 left-0">
                     <img className="h-full w-full rounded-r-full" src="assets/Home/bar_back.png" />
                 </div>
             </div>
