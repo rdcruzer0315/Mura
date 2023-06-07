@@ -53,6 +53,12 @@ const Header = () => {
     const onSignOut = (e) => {
         dispatch(signoutData());
     }
+    
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleMenuClick = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
         <>
@@ -69,58 +75,69 @@ const Header = () => {
             }
             </div>
             <div className="flex lg:flex-row flex-col lg:items-end items-center lg:mx-40 mx-1 pt-12 justify-center">
-                <div className="ml-4 flex lg:flex-row flex-col items-center">
+                <div className="ml-4 flex lg:flex-row flex-col">
                     <NavLink to="/">
                         <img className="w-60 max-w-none lg:mr-20 mr-0" src="assets/Logo/logo.png" alt="Mura" />
                     </NavLink>
-                    <MenuComponent />
-                    <NavLink
-                        to="/brand"
-                        className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-normal font-weight-500 text-center hover:underline"
+                    {/* Hamburger Icon */}
+                    <div
+                        className={`hamburgerIcon ${isOpen ? '' : 'open'}`}
+                        onClick={handleMenuClick}
                     >
-                    BRAND STORY
-                    </NavLink>
-                    <NavLink
-                        to="/news"
-                        className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
-                    >
-                        NEWS/EVENT
-                    </NavLink>
-                    <NavLink
-                        to="/faq"
-                        className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
-                    >
-                        FAQS
-                    </NavLink>
-                    <NavLink
-                        to="/careers"
-                        className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
-                    >
-                    CAREERS
-                    </NavLink>
-                    {/* <NavLink
-                        onClick={onShowSignUpModal}
-                        className="text-black px-12 py-2 rounded-md text-base font-weight-500 text-center"
-                    >
-                    SignUp
-                    </NavLink> */}
-                    {
-                    sign_state ?
-                        <>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div className={`menuItems ${isOpen ? 'open' : ''}`}>
+                        <MenuComponent />
                         <NavLink
-                            to="/candidate"
-                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
+                            to="/brand"
+                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-normal font-weight-500 text-center"
                         >
-                        CANDIDATES
+                        BRAND STORY
                         </NavLink>
                         <NavLink
-                            to="/manage"
-                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center hover:underline"
+                            to="/news"
+                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
                         >
-                        MANAGEMENT
+                            NEWS/EVENT
                         </NavLink>
-                        </> : null
-                    }
+                        <NavLink
+                            to="/faq"
+                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                        >
+                            FAQS
+                        </NavLink>
+                        <NavLink
+                            to="/careers"
+                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                        >
+                        CAREERS
+                        </NavLink>
+                        {/* <NavLink
+                            onClick={onShowSignUpModal}
+                            className="text-black px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                        >
+                        SignUp
+                        </NavLink> */}
+                        {
+                        sign_state ?
+                            <>
+                            <NavLink
+                                to="/candidate"
+                                className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                            >
+                            CANDIDATES
+                            </NavLink>
+                            <NavLink
+                                to="/manage"
+                                className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                            >
+                            MANAGEMENT
+                            </NavLink>
+                            </> : null
+                        }
+                    </div>
                 </div>
             </div>
         </nav>
