@@ -76,14 +76,14 @@ const Careers = () => {
         </div>
         <div className="lg:mt-16 mt-8">
             <p className="lg:text-5xl text-3xl text-black font-bold text-center">Join Our Team</p>
-            <div className="lg:mx-96 mx-2 lg:p-8 p-2 lg:mt-8 mt-4 border border-black rounded">
+            <div className="lg:mx-96 mx-2 lg:p-8 p-2 lg:mt-8 mt-4">
                 <div className="w-full flex flex-row items-center justify-start">
                     <p className="w-1/4">Name:<b className="pl-1 text-[#FF0000]">*</b></p>
                     <input
                         type="text"
                         value={name}
                         onChange={onName}
-                        className="w-full ml-3 bg-[#D9D9D9] text-base p-2 border-none rounded-md"
+                        className="w-full ml-3 bg-gray text-base p-2 border-none rounded-md"
                     />
                 </div>
                 <div className="w-full flex flex-row items-center justify-start mt-2">
@@ -92,7 +92,7 @@ const Careers = () => {
                         type="text"
                         value={position}
                         onChange={onPosition}
-                        className="w-full ml-3 bg-[#D9D9D9] text-base p-2 border-none rounded-md"
+                        className="w-full ml-3 bg-gray text-base p-2 border-none rounded-md"
                     />
                 </div>
                 <div className="w-full flex flex-row items-center justify-start mt-2">
@@ -101,7 +101,7 @@ const Careers = () => {
                         type="text"
                         value={phone}
                         onChange={onPhone}
-                        className="w-full ml-3 bg-[#D9D9D9] text-base p-2 border-none rounded-md"
+                        className="w-full ml-3 bg-gray text-base p-2 border-none rounded-md"
                     />
                 </div>
                 <div className="w-full flex flex-row items-center justify-start mt-2">
@@ -110,12 +110,12 @@ const Careers = () => {
                         type="text"
                         value={email}
                         onChange={onEmail}
-                        className="w-full ml-3 bg-[#D9D9D9] text-base p-2 border-none rounded-md"
+                        className="w-full ml-3 bg-gray text-base p-2 border-none rounded-md"
                     />
                 </div>
                 <div className="w-full flex flex-row items-center justify-start mt-2">
                     <p className="w-1/4">Resume:<b className="pl-1 text-[#FF0000]">*</b></p>
-                    <div className="w-full flex flex-row items-center ml-3 bg-[#D9D9D9] text-base lg:p-2 p-1 border-none rounded-md">
+                    <div className="w-full flex flex-row items-center ml-3 bg-white text-base lg:p-2 p-1 border-none rounded-md">
                         <div className="w-1/2">
                             <input 
                                 accept=".doc, .docx, .pdf" 
