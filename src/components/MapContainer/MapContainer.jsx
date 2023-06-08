@@ -11,7 +11,7 @@ const MapContainer = () => {
   const center = useMemo(() => ({ lat: 33.670204, lng: -78.947204 }), []);
 
   const [isOpen, setIsOpen] = useState(true);
-  const [zoom, setZoom] = useState(12);
+  const [zoom, setZoom] = useState(13);
 
   const handleMarkerDblClick = () => {
     setZoom(prevZoom => prevZoom + 1);
@@ -56,7 +56,6 @@ const MapContainer = () => {
         ]
       }
     ],
-    mapTypeId: "satellite"
   }
   const position = {
     lat: 33.670204,
