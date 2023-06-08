@@ -59,7 +59,7 @@ const Careers = () => {
 
     return (
         <>
-        <div style={{ fontFamily:"Gillsans" }} className="bg-[#F5ECE6] lg:pt-40 pt-20 flex lg:flex-row flex-col lg:mx-60 mx-6">
+        <div style={{ fontFamily:"Gillsans" }} className="bg-[#F5ECE6] lg:pt-40 pt-20 flex lg:flex-row flex-col xl:mx-60 lg:mx-20 mx-6">
             <img className="lg:w-1/2 lg:mr-32 w-full rounded-xl" src="assets/careers.png" alt="careers" />
             <div className="lg:w-1/2 w-full flex flex-col justify-center lg:mt-0 mt-20">
                 <p className="lg:text-4xl text-2xl mt-5 font-semibold lg:leading-12 leading-5 text-center tracking-widest">COME JOIN OUR TEAM</p>

@@ -1,129 +1,129 @@
 .MyModal {
-    position: absolute;
-    z-index: 1;
-    overflow: auto;
-    border-radius: 2%;
-    top: 20%;
-    left: 5%;
-    right: 5%;
-    bottom: 20%;
-    padding: 10px;
-    border: 1px solid black;
-    background: #fff;
-    max-width: 600px;
-    margin: auto;
-    outline: none;
+  position: absolute;
+  z-index: 1;
+  overflow: auto;
+  border-radius: 2%;
+  top: 20%;
+  left: 5%;
+  right: 5%;
+  bottom: 20%;
+  padding: 10px;
+  border: 1px solid black;
+  background: #fff;
+  max-width: 600px;
+  margin: auto;
+  outline: none;
 }
 
 .MyOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media screen and (min-width: 600px) {
-    .MyModal {
-        top: 10%;
-        left: 20%;
-        right: 20%;
-        bottom: 10%;
-    }
+  .MyModal {
+      top: 10%;
+      left: 20%;
+      right: 20%;
+      bottom: 10%;
+  }
 }
 
 @media screen and (min-width: 900px) {
-    .MyModal {
-        top: 28%;
-        left: 25%;
-        right: 25%;
-        bottom: 28%;
-    }
+  .MyModal {
+      top: 28%;
+      left: 25%;
+      right: 25%;
+      bottom: 28%;
+  }
 }
 
 .menuContainer {
-    display: flex;
-    justify-content: center;
-    padding-top: 12px;
-    margin-left: 4px;
-  }
-  
-  .menuContent {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 60px;
-    max-width: none;
-    margin-right: 20px;
-  }
-  
-  .hamburgerIcon {
-    display: none;
-  }
-  
-  .hamburgerIcon span {
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: #000;
-    margin-bottom: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+  margin-left: 4px;
+}
+
+.menuContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+  max-width: none;
+  margin-right: 20px;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+
+.hamburgerIcon span {
+  display: none;
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.menuItems.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menuItem {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1023px) {
   .menuItems {
+      flex-direction: row;
+      align-items: center;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hamburgerIcon {
     display: flex;
     flex-direction: column;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.3s ease-in-out;
-  }
-  
-  .menuItems.open {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .menuItem {
-    margin-bottom: 10px;
+    justify-content: space-between;
+    cursor: pointer;
   }
 
-  @media (min-width: 1023px) {
-    .menuItems {
-        flex-direction: row;
-        align-items: center;
+  .hamburgerIcon span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
     }
-  }
-  
-  @media (max-width: 1023px) {
-    .hamburgerIcon {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      cursor: pointer;
+    
+    .hamburgerIcon span:nth-child(2) {
+      opacity: 0;
     }
-  
-    .hamburgerIcon span:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
-      }
-      
-      .hamburgerIcon span:nth-child(2) {
-        opacity: 0;
-      }
-      
-      .hamburgerIcon span:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
-      }
-      
-      .hamburgerIcon.open span:nth-child(1),
-      .hamburgerIcon.open span:nth-child(3) {
-        transform: translateY(0) rotate(0);
-      }
-      
-      .hamburgerIcon.open span:nth-child(2) {
-        opacity: 1;
-      }      
-  }  
+    
+    .hamburgerIcon span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+    
+    .hamburgerIcon.open span:nth-child(1),
+    .hamburgerIcon.open span:nth-child(3) {
+      transform: translateY(0) rotate(0);
+    }
+    
+    .hamburgerIcon.open span:nth-child(2) {
+      opacity: 1;
+    }      
+}  
