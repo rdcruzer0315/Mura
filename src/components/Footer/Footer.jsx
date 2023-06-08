@@ -1,21 +1,21 @@
 import { NavLink } from "react-router-dom";
-import MapView from "../MapView/MapView";
+import MapContainer from "../MapContainer/MapContainer";
 
 const Footer = () => {
     return (
         <>
         <div className="lg:my-40 my-20 flex shadow shadow-gray-500">
-            <MapView />
+            <MapContainer />
         </div>
         <div className="mt-10 pb-20 grid lg:grid-cols-3 grid-cols-1">
             <div className="lg:col-start-1 lg:col-span-1 w-full">
                 <p className="font-bold text-black lg:text-2xl text-lg text-center tracking-widest">CONTACT</p>
                 <div className="flex flex-row items-center justify-center lg:mt-8 mt-3 cursor-pointer">
-                    <img className="lg:w-6 w-4" src="assets/phone.png" />
+                    <img className="lg:w-6 w-4" src="assets/phone.png" alt="phone"/>
                     <p className="font-bold text-[#F5ECE6] ml-4 lg:text-xl text-xs text-center tracking-widest">+1 _______________</p>
                 </div>
                 <div className="flex flex-row items-center justify-center cursor-pointer lg:mt-3 mt-1">
-                    <img className="lg:w-6 w-4" src="assets/email.png" />
+                    <img className="lg:w-6 w-4" src="assets/email.png" alt="email"/>
                     <p className="font-bold text-black ml-4 lg:text-xl text-xs text-center tracking-widest">INFO@MURAMB.COM</p>
                 </div>
             </div>
