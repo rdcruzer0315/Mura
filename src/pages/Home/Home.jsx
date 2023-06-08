@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import "./Home.css";
 
 const Home = () => {
     return (
@@ -24,7 +23,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="w-1/2 flex flex-col justify-center items-center">
-                <p id="cafe" style={{ fontFamily:"Baskerville" }} className="font-bold text-black lg:text-5xl text-lg text-center">CAFE MENU</p>
+                <p id="cafe" style={{ fontFamily:"Baskerville" }} className="font-bold text-black lg:text-5xl text-3xl text-center">CAFE MENU</p>
                 <img className="w-1/2 lg:mt-6 mt-3" src="assets/Home/cafe_logo.png" alt="cafe_logo"/>
                 <NavLink to="/cafe" className="flex justify-center">
                     <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
@@ -33,11 +32,11 @@ const Home = () => {
         </div>
         <div className="lg:mt-10 mt-5 flex flex-row">
             <div className="w-1/2 flex flex-col justify-center items-center">
-                <p id="brunch" style={{ fontFamily:"Baskerville" }} className="font-bold text-black lg:text-5xl text-lg text-center">BRUNCH/DINNER MENU</p>
+                <p id="brunch" style={{ fontFamily:"Baskerville" }} className="font-bold text-black lg:text-5xl text-3xl text-center">BRUNCH/DINNER MENU</p>
                 <img className="w-1/2 lg:mt-6 mt-3" src="assets/Home/brunch_logo.png" alt="brunch_logo"/>
                 <img className="w-1/2 lg:mt-6 mt-3" src="assets/Home/dinner_logo.png" alt="dinner_logo"/>
                 <NavLink to="/dinner" className="flex justify-center">
-                    <image className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
+                    <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
                 </NavLink>
             </div>
             <div className="w-1/2 relative flex justify-end items-center">
@@ -55,7 +54,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="w-1/2 flex flex-col justify-center items-center">
-                <p id="bar" style={{ fontFamily:"Baskerville" }} className="font-bold text-black lg:text-5xl text-lg text-center">BAR MENU</p>
+                <p id="bar" style={{ fontFamily:"Baskerville" }} className="font-bold text-black lg:text-5xl text-3xl text-center">BAR MENU</p>
                 <img className="w-1/2 lg:mt-6 mt-3" src="assets/Home/bar_logo.png" alt="bar_logo"/>
                 <NavLink to="/bar" className="flex justify-center">
                     <img className="w-1/2 lg:mt-6 mt-3 cursor-pointer" src="assets/see_menu.png" alt="cafe_logo"/>
