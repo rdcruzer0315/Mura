@@ -78,7 +78,7 @@ const Careers = () => {
             <p className="lg:text-5xl text-3xl text-black font-bold text-center">Join Our Team</p>
             <div className="lg:mx-96 mx-2 lg:p-8 p-2 lg:mt-8 mt-4">
                 <div className="w-full flex flex-row items-center justify-start">
-                    <p className="w-1/4">Name:<b className="pl-1 text-[#FF0000]">*</b></p>
+                    <p className="lg:w-1/4 w-1/3">Name:<b className="pl-1 text-[#FF0000]">*</b></p>
                     <input
                         type="text"
                         value={name}
@@ -87,7 +87,7 @@ const Careers = () => {
                     />
                 </div>
                 <div className="w-full flex flex-row items-center justify-start mt-2">
-                    <p className="w-1/4">Position:<b className="pl-1 text-[#FF0000]">*</b></p>
+                    <p className="lg:w-1/4 w-1/3">Position:<b className="pl-1 text-[#FF0000]">*</b></p>
                     <input
                         type="text"
                         value={position}
@@ -96,7 +96,7 @@ const Careers = () => {
                     />
                 </div>
                 <div className="w-full flex flex-row items-center justify-start mt-2">
-                    <p className="w-1/4">Phone:<b className="pl-1 text-[#FF0000]">*</b></p>
+                    <p className="lg:w-1/4 w-1/3">Phone:<b className="pl-1 text-[#FF0000]">*</b></p>
                     <input
                         type="text"
                         value={phone}
@@ -105,7 +105,7 @@ const Careers = () => {
                     />
                 </div>
                 <div className="w-full flex flex-row items-center justify-start mt-2">
-                    <p className="w-1/4">Email:<b className="pl-1 text-[#FF0000]">*</b></p>
+                    <p className="lg:w-1/4 w-1/3">Email:<b className="pl-1 text-[#FF0000]">*</b></p>
                     <input
                         type="text"
                         value={email}
@@ -114,7 +114,7 @@ const Careers = () => {
                     />
                 </div>
                 <div className="w-full flex flex-row items-center justify-start mt-2">
-                    <p className="w-1/4">Resume:<b className="pl-1 text-[#FF0000]">*</b></p>
+                    <p className="lg:w-1/4 w-1/3">Resume:<b className="pl-1 text-[#FF0000]">*</b></p>
                     <div className="w-full flex flex-row items-center ml-3 bg-white text-base lg:p-2 p-1 border-none rounded-md">
                         <div className="w-1/2">
                             <input 
