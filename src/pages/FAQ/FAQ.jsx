@@ -22,7 +22,7 @@ const items = [
 const FAQ = () => {
     return (
         <>
-        <div className="bg-[#F5ECE6] pt-20 flex lg:flex-row flex-col">
+        <div style={{ fontFamily:"Gillsans" }} className="bg-[#F5ECE6] pt-20 flex lg:flex-row flex-col">
             <div className="lg:w-2/3 w-full lg:pl-60 lg:pr-24 lg:pb-24 pl-12 pr-12">
                 <p className="lg:pt-20 pt-4 lg:text-5xl text-3xl lg:text-left text-center font-bold text-black">F A Q</p>
                 <p className="text-black lg:text-2xl text-xl lg:text-left text-center leading-relaxed pt-12">

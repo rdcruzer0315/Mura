@@ -7,6 +7,11 @@
   src: url(./assets/fonts/GillSans.ttc);
 }
 
+@font-face {
+  font-family: Baskerville;
+  src: url(./assets/fonts/Baskerville.ttc);
+}
+
 @layer utilities {
   .square {
     height: 0;
@@ -16,13 +21,12 @@
 
 body {
   margin: 0;
-  font-family: GillSans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', GillSans,
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', GillSans, Baskerville,
     monospace;
 }
 

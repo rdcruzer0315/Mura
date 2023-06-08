@@ -11,11 +11,11 @@ const Accordion = ({ items }) => {
         <>
         <div>
             {items.map((item, index) => (
-            <div className="lg:mb-12 mb-6 lg:p-5 p-3 border border-black rounded-lg" key={item.title}>
+            <div style={{ fontFamily:"Gillsans" }} className="lg:mb-12 mb-6 lg:p-5 p-3 border border-black rounded-lg" key={item.title}>
                 <div onClick={() =>handleClick(index)} className="lg:text-3xl text-xl flex flex-row justify-between items-center cursor-pointer">
                     <button className="font-semibold">{item.title}</button>
                 </div>
-                {index !== activeIndex && <p className="lg:text-2xl text-xl mt-5">{item.content}</p>}
+                {index !== activeIndex && <p className="lg:text-2xl text-lg mt-5">{item.content}</p>}
             </div>
             ))}
         </div>

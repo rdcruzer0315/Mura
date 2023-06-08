@@ -67,6 +67,7 @@ const Header = () => {
             {
                 sign_state ? null :
                     <NavLink
+                        style={{ fontFamily:"Gillsans" }}
                         className="text-white bg-black lg:mt-6 mt-4 lg:mr-6 mt-2 mr-2 lg:px-6 px-4 lg:py-2 py-1 border border-1 border-black rounded-full text-base font-weight-500 text-center"
                         onClick={onAdmin}
                     >
@@ -92,24 +93,28 @@ const Header = () => {
                         <MenuComponent />
                         <NavLink
                             to="/brand"
+                            style={{ fontFamily:"Gillsans" }}
                             className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-normal font-weight-500 text-center"
                         >
                         BRAND STORY
                         </NavLink>
                         <NavLink
                             to="/news"
+                            style={{ fontFamily:"Gillsans" }}
                             className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
                         >
                             NEWS/EVENT
                         </NavLink>
                         <NavLink
                             to="/faq"
+                            style={{ fontFamily:"Gillsans" }}
                             className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
                         >
                             FAQS
                         </NavLink>
                         <NavLink
                             to="/careers"
+                            style={{ fontFamily:"Gillsans" }}
                             className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
                         >
                         CAREERS
@@ -125,12 +130,14 @@ const Header = () => {
                             <>
                             <NavLink
                                 to="/candidate"
+                                style={{ fontFamily:"Gillsans" }}
                                 className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
                             >
                             CANDIDATES
                             </NavLink>
                             <NavLink
                                 to="/manage"
+                                style={{ fontFamily:"Gillsans" }}
                                 className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
                             >
                             MANAGEMENT
