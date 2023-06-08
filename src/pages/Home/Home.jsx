@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <>
         <div className="flex flex-col items-center justify-center mt-40">
-            <p id="caption" className="font-bold text-center mx-auto">EAT UP AND ENJOY</p>
+            <p id="caption" className="font-bold text-center mx-auto tracking-widest">EAT UP AND ENJOY</p>
             <div className="grid lg:grid-cols-9 grid-cols-1">
                 <p id="content" className="lg:col-start-3 lg:col-span-5 lg:px-0 col-start-1 col-span-1 px-10 font-normal text-center mt-12">
                     Welcome to Myrtle Beach's first conveyor belt restaurant. We are excited to open our doors and offer
