@@ -90,32 +90,32 @@ const Header = () => {
                         <span></span>
                     </div>
                     <div className={`menuItems ${isOpen ? 'open' : ''}`}>
-                        <MenuComponent />
                         <NavLink
                             to="/brand"
                             style={{ fontFamily:"Gillsans" }}
-                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-normal font-weight-500 text-center"
+                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 hover:font-bold text-center"
                         >
                         BRAND STORY
                         </NavLink>
+                        <MenuComponent />
                         <NavLink
                             to="/news"
                             style={{ fontFamily:"Gillsans" }}
-                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 hover:font-bold text-center"
                         >
                             NEWS/EVENT
                         </NavLink>
                         <NavLink
                             to="/faq"
                             style={{ fontFamily:"Gillsans" }}
-                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 hover:font-bold text-center"
                         >
                             FAQS
                         </NavLink>
                         <NavLink
                             to="/careers"
                             style={{ fontFamily:"Gillsans" }}
-                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                            className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 hover:font-bold text-center"
                         >
                         CAREERS
                         </NavLink>
@@ -131,14 +131,14 @@ const Header = () => {
                             <NavLink
                                 to="/candidate"
                                 style={{ fontFamily:"Gillsans" }}
-                                className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                                className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 hover:font-bold text-center"
                             >
                             CANDIDATES
                             </NavLink>
                             <NavLink
                                 to="/manage"
                                 style={{ fontFamily:"Gillsans" }}
-                                className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 text-center"
+                                className="text-black hover:text-[#CBBAAB] px-12 py-2 rounded-md text-base font-weight-500 hover:font-bold text-center"
                             >
                             MANAGEMENT
                             </NavLink>
