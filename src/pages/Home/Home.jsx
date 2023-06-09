@@ -4,9 +4,9 @@ const Home = () => {
     return (
         <>
         <div style={{ fontFamily: "Gillsans" }} className="flex flex-col items-center justify-center mt-40">
-            <p id="caption" className="font-extrabold text-center mx-auto tracking-widest lg:text-5xl text-3xl">EAT UP AND ENJOY</p>
+            <p id="caption" style={{ fontFamily: "Gillsans" }} className="font-black text-center mx-auto tracking-widest lg:text-5xl text-3xl">EAT UP AND ENJOY</p>
             <div className="grid lg:grid-cols-9 grid-cols-1">
-                <p id="content" className="lg:col-start-3 lg:col-span-5 lg:px-0 col-start-1 col-span-1 px-10 font-normal text-center mt-12 lg:text-3xl text-xl">
+                <p id="content" className="lg:col-start-3 lg:col-span-5 lg:px-0 col-start-1 col-span-1 px-10 font-normal text-center mt-12 lg:text-3xl text-xl lg:leading-relaxed">
                     Welcome to Myrtle Beach's first conveyor belt restaurant. We are excited to open our doors and offer
                     a unique and fun dining experience. Mura is not the traditional conveyor belt restaurant you may have
                     seen used for sushi. Our menu includes small bites ranging from our signature milk bread with seasonal
